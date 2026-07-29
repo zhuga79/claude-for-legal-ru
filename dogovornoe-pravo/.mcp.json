@@ -1,0 +1,15 @@
+{
+  "_comment": "Локализация РФ. Из оригинала удалены US/UK-коннекторы (Ironclad, DocuSign, iManage, TopCounsel, Definely) — в РФ у них нет применимых аналогов с официальным MCP. Российские источники (КонсультантПлюс, Гарант, kad.arbitr.ru, ЕГРЮЛ/egrul.nalog.ru, ЕФРСБ) официального MCP не имеют — работаем через режим paste-source / веб-поиск с тегами [проверить]. Google Drive оставлен для загрузки документов; включайте по необходимости.",
+  "mcpServers": {
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Поиск, чтение и загрузка документов из Google Drive."
+    }
+  },
+  "recommendedCategories": [
+    "documents",
+    "contract-review"
+  ]
+}
