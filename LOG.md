@@ -123,3 +123,16 @@ claim-chart, entity-compliance, matter-intake); оценка «дешёвых» 
 
 `claude plugin validate` — passed (1 ожидаемый warning). Меток `[проверить]` в плагине: 27.
 Отчёт роли `lawyer` со всеми 39 находками — во временной папке сессии, в репозиторий не вносился.
+
+## 2026-08-06 | claude-opus-5 | доставка правок в среду — версионный кэш плагинов
+
+Обнаружено при проверке после local-002: установленный плагин читается не из папки-форка, а из
+снимка `~/.claude/plugins/cache/claude-for-legal-ru/dogovornoe-pravo/0.1.0/` от 29.07. То есть все
+правки правового существа оставались в репозитории и не действовали в среде — активная версия
+плагина продолжала содержать обе CRITICAL-ошибки. `claude plugin update` не помогает: сообщает
+«already at the latest version (0.1.0)», так как ключ кэша — версия, а не содержимое.
+
+Решение без смены версии (смена версии как релиз — гейт пользователя): `claude plugin uninstall
+<plugin>@claude-for-legal-ru --scope user --keep-data` + `claude plugin install <plugin>@claude-for-legal-ru
+--scope user`. Проверено: после переустановки в кэше 0 вхождений старой формулировки, новая на месте;
+плагин enabled, scope user. Правило внесено в `BRAIN.md` → Done Checks.
