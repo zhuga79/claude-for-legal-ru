@@ -17,3 +17,29 @@
 - `claude plugin validate` — passed (1 warning про root CLAUDE.md, ожидаемо: шаблон-профиль).
 - Установлен: `dogovornoe-pravo@claude-for-legal-ru`, scope user, ~1k always-on токенов.
 - git: commit 29591e5.
+
+## 2026-08-06 | claude-opus-5 | local-004 WIP зафиксирован — personalnye-dannye (ФЗ-152)
+
+Роль: pm (оркестрация). Работа по local-004 сделана ранее, но оставалась вне git.
+
+- Локализован privacy-legal → `personalnye-dannye`: 8 скиллов (use-case-triage, pdn-assessment,
+  poruchenie-review, subject-request, reg-gap-analysis, policy-monitor, cold-start-interview,
+  customize), CLAUDE.md-профиль по ФЗ-152, `.mcp.json`, `references/currency-watch.md`.
+- Покрытие норм подтверждено: ст.6 ч.3 (поручение), ст.9/10/11 (согласие, спецкатегории,
+  биометрия), ст.12 (трансграничная передача), ст.14/20/21 (обращения субъекта), ст.18 ч.5
+  (локализация БД), ст.18.1 (оценка вреда), ст.22/22.1 (уведомление РКН, ответственное лицо),
+  КоАП ст.13.11 (в т. ч. оборотные штрафы, 420-ФЗ), УК ст.272.1, сроки 24/72 ч по инцидентам.
+- `claude plugin validate personalnye-dannye` — passed (1 warning про root CLAUDE.md, как у эталона).
+- Установлен и enabled: `personalnye-dannye@claude-for-legal-ru`, scope user.
+- Скан перед коммитом: секретов и клиентских ПДн в плагинах нет.
+- Задача остаётся `[~]`: правовое существо не прошло ревью роли `compliance`. По BRAIN.md
+  (Action Gates) финализация без такого ревью требует одобрения пользователя. Заведена local-011.
+- git: commit af4203e (WIP-фиксация; задача не принята).
+
+### Открытый ADR: политика scope при локализации
+
+Плагины форка локализованы с разной полнотой относительно апстрима: `dogovornoe-pravo` — 6 из 12
+скиллов commercial-legal (не перенесены amendment-history, matter-workspace, renewal-tracker,
+review-proposals, saas-msa-review, stakeholder-summary); `personalnye-dannye` — 8 из 9 скиллов
+privacy-legal (не перенесён matter-workspace). Решение не зафиксировано, владелец —
+пользователь. Заведена local-012.

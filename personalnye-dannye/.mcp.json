@@ -1,0 +1,14 @@
+{
+  "_comment": "Локализация РФ. Удалены US/EU-коннекторы. Официальный источник по ПДн в РФ — Роскомнадзор (rkn.gov.ru, портал персональных данных pd.rkn.gov.ru, реестр операторов) и pravo.gov.ru; официального MCP у них нет — работаем в режиме paste-source / веб-поиск с тегами [проверить по первоисточнику]. Google Drive оставлен для загрузки документов; включайте по необходимости.",
+  "mcpServers": {
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Поиск, чтение и загрузка документов из Google Drive."
+    }
+  },
+  "recommendedCategories": [
+    "documents"
+  ]
+}
