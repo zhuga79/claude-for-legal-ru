@@ -7,8 +7,8 @@
       role: developer
       acceptance: Плагин установлен, `claude plugin validate` проходит; 6 скиллов (review, vendor-agreement-review, nda-review, escalation-flagger, customize, cold-start-interview); CLAUDE.md-профиль по ГК РФ; .mcp.json без US/UK-коннекторов; LICENSE+NOTICE. Готово.
 
-- [ ] [P1] local-002 — Ревью правового существа `dogovornoe-pravo` ролью lawyer
-      role: lawyer   mode: solo
+- [~] [P1] local-002 — Ревью правового существа `dogovornoe-pravo` ролью lawyer
+      role: lawyer   mode: solo   started: 2026-08-06   by: claude-opus-5-3c9f
       acceptance: Проверены нормы и квалификации в скиллах (ст. 15/330/394/401/333/450.1/782 ГК, подсудность АПК/ГПК, претензионный порядок ч.5 ст.4 АПК, ФЗ-98/ст.1465, адвокатская тайна ст.8 ФЗ-63); ошибки/пробелы исправлены; спорное помечено `[проверить]`.
 
 - [ ] [P1] local-003 — Тест cold-start на реальном договоре
@@ -19,8 +19,8 @@
       role: developer   mode: solo
       acceptance: Плагин `personalnye-dannye`: DPIA→оценка вреда/ПДн, поручение на обработку (ст.6 ч.3 ФЗ-152), локализация БД в РФ (ст.18 ч.5), уведомление РКН, DSAR→обращение субъекта ПДн (ст.14 ФЗ-152), трансграничная передача (ст.12). US/EU GDPR-существо заменено на ФЗ-152. validate проходит.
 
-- [ ] [P1] local-011 — Ревью правового существа `personalnye-dannye` ролью compliance
-      role: compliance   mode: solo
+- [~] [P1] local-011 — Ревью правового существа `personalnye-dannye` ролью compliance
+      role: compliance   mode: solo   started: 2026-08-06   by: claude-opus-5-3c9f
       контекст: плагин собран и установлен (enabled, user scope), но правовое существо не
       проверено; по BRAIN.md → Action Gates финализация без ревью требует одобрения. Блокирует
       закрытие local-004.
@@ -29,13 +29,12 @@
       сверены пункты `references/currency-watch.md` с первоисточниками; ошибки исправлены;
       спорное помечено `[проверить]`.
 
-- [ ] [P1] local-012 — Решение: политика scope при локализации плагинов + ADR
-      role: architect   mode: solo
-      контекст: `dogovornoe-pravo` — 6 из 12 скиллов апстрима, `personalnye-dannye` — 8 из 9.
-      Правило не зафиксировано, из-за чего каждый следующий плагин решает заново.
-      acceptance: Выбрана политика (полный паритет с апстримом / core subset по правовому
-      существу); решение записано ADR в `LOG.md` и правилом в `BRAIN.md` → Agent Rules; при
-      выборе паритета заведены задачи на добор скиллов `dogovornoe-pravo`.
+- [x] [P1] local-012 — Решение: политика scope при локализации плагинов + ADR
+      role: architect   mode: solo   started: 2026-08-06   by: claude-opus-5-3c9f
+      model: claude-opus-5 (анализ — sonnet-подагент, решение и запись — opus)
+      acceptance: Выполнен. Политика — «core (правовое существо РФ) + дешёвая generic-обвязка»;
+      ADR-002 в `LOG.md`, правило в `BRAIN.md` → Agent Rules; инвентаризация 7 апстрим-плагинов
+      с классами a/b/c; заведены local-013, local-014.
 
 - [ ] [P1] local-005 — Оценить litigation-legal → плагин «Доследственная проверка / защита (УПК РФ)»
       role: architect   mode: council   council: [architect, lawyer]
@@ -57,12 +56,33 @@
       role: developer   mode: solo
       acceptance: Плагин: мониторинг НПА (regulation.gov.ru, pravo.gov.ru), диффы против политик, сроки публичного обсуждения. validate проходит.
 
+- [ ] [P2] local-013 — Добор `dogovornoe-pravo` до политики ADR-002
+      role: developer   mode: solo
+      контекст: по ADR-002 плагину не хватает одного скилла класса (a) и четырёх класса (b).
+      Оценка 3–5 сессий (P50: 4).
+      acceptance: Добавлены `saas-msa-review` (переработка под РФ: автопродление и односторонний
+      отказ ст.450.1/310, изменение цены ст.424, SLA и ответственность ст.401, субпроцессоры ПДн
+      ст.6 ч.3 ФЗ-152) и generic-скиллы `renewal-tracker`, `stakeholder-summary`,
+      `amendment-history`; правовое существо `saas-msa-review` прошло ревью роли `lawyer`;
+      validate проходит. `review-proposals` не входит (см. «Отложено»).
+
+- [ ] [P3] local-014 — `matter-workspace` как общий модуль форка
+      role: architect   mode: solo
+      контекст: скилл идентичен во всех 7 апстрим-плагинах; реализовывать 7 раз — дублирование
+      и риск рассинхронизации. Класс (b) по ADR-002.
+      acceptance: Решено и реализовано, как ведение дел по клиентам подключается к плагинам форка
+      (общий скилл/шаблон vs копия в каждом плагине); подключено к `dogovornoe-pravo` и
+      `personalnye-dannye`; конфиг-пути и архивирование дел не ломают `.gitignore` (`matters/`).
+
 - [ ] [P3] local-010 — README.md форка + шаблон company-profile.md
       role: developer   mode: solo
       acceptance: README (назначение, установка `claude plugin marketplace add`, дисклеймер, атрибуция); `company-profile.md` шаблон, общий для плагинов форка (ОПФ, режим налогообложения, юрисдикция, ПД).
 
 ## Отложено / под вопрос
 
+- `review-proposals` (commercial-legal) — формально класс (b), но нефункционален без
+  непортированного агента `playbook-monitor`. Возвращать к вопросу вместе с решением о
+  портировании агентов и hooks апстрима, не в рамках local-013.
 - product-legal, ai-governance-legal, law-student, legal-clinic, legal-builder-hub,
   cocounsel-legal — локализовать по необходимости; часть слабо ложится на РФ
   (юрклиники/law-school под US) или требует отдельного решения о scope.

@@ -42,4 +42,46 @@
 скиллов commercial-legal (не перенесены amendment-history, matter-workspace, renewal-tracker,
 review-proposals, saas-msa-review, stakeholder-summary); `personalnye-dannye` — 8 из 9 скиллов
 privacy-legal (не перенесён matter-workspace). Решение не зафиксировано, владелец —
-пользователь. Заведена local-012.
+пользователь. Заведена local-012. → Закрыто ADR-002 ниже.
+
+## 2026-08-06 | claude-opus-5 (роль architect) | local-012 done — ADR-002: политика scope
+
+### ADR-002: Scope плагина = core (правовое существо РФ) + дешёвая generic-обвязка
+
+**Status:** Accepted · **Date:** 2026-08-06
+
+**Context.** `dogovornoe-pravo` — 6 из 12 скиллов commercial-legal (убрана вся generic-обвязка
+и правовой скилл saas-msa-review); `personalnye-dannye` — 8 из 9 privacy-legal (оставлен
+generic-tracker policy-monitor, убран matter-workspace). Критерий отбора не был зафиксирован:
+у двух готовых плагинов асимметричные наборы функций одного класса, а пять плагинов в очереди
+(corporate/employment/ip/regulatory/litigation) не имели правила для планирования scope.
+
+**Decision.** Каждый апстрим-скилл классифицируется до начала локализации:
+- **(a) правовое существо** — требует переработки под нормы РФ; переносится всегда.
+- **(b) generic-обвязка** — механика без правовой специфики (workspace, трекеры, форматирование
+  summary); переносится, если стоимость ≈0.5–1 сессия и функция востребована соло/малой практикой.
+- **(c) неприменимо в РФ** — опирается на институт, которого нет в праве/процессе РФ; не переносится
+  и не публикуется под видом РФ-скилла.
+
+Полный паритет с апстримом не требуется. Правило внесено в `BRAIN.md` → Agent Rules.
+
+**Класс (c) по инвентаризации 7 апстрим-плагинов:** takedown (DMCA §512 — в РФ ст. 15.7 ФЗ-149,
+иная модель), deposition-prep, subpoena-triage (в РФ доказательства истребует суд — ст. 66 АПК,
+ст. 57 ГПК), privilege-log-review (нет широкого discovery), leave-tracker/log-leave (FMLA),
+expansion-* (EOR-модель найма за рубежом от лица US-компании), comments (NPRM по APA США),
+ai-tool-handoff (Luminance/Kira — enterprise-инструменты).
+
+**Alternatives considered.** Полный паритет — отвергнут: класс (c) юридически ложен при дословном
+переносе, а переработка не окупается. Core-only (лишь класс a) — отвергнут: исключает дешёвую,
+но нужную инфраструктуру (matter-workspace, chronology, portfolio-status).
+
+**Consequences.** (+) Единый критерий на 5 плагинов очереди; исключён псевдо-РФ-скилл на
+нероссийском институте. (−) Граница a/b/c субъективна на смешанных случаях (legal-hold,
+claim-chart, entity-compliance, matter-intake); оценка «дешёвых» (b) может расти при вскрытии
+скрытой правовой специфики (напр. конфликт-чек в matter-intake упирается в этику — ст. 13 КПЭА);
+класс (c) требует пересмотра при изменении права РФ.
+
+**Follow-up.** Заведены local-013 (добор `dogovornoe-pravo`: saas-msa-review + 4 generic-скилла,
+3–5 сессий) и local-014 (`matter-workspace` — один общий модуль форка вместо 7 копий).
+`review-proposals` не добирается: нефункционален без непортированного агента `playbook-monitor` —
+вынесен в «Отложено».
