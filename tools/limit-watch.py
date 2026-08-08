@@ -23,7 +23,11 @@ from pathlib import Path
 PROJECTS = Path.home() / ".claude" / "projects"
 
 # Калибровка: [(процент, показанный в /usage, billable-токены на тот момент), ...]
-CALIBRATION: list[tuple[float, int]] = []
+# Точка (0, 0) — начало окна. Точка 2026-08-08: /usage показал 31% при 5 820 917 billable.
+CALIBRATION: list[tuple[float, int]] = [(0.0, 0), (31.0, 5_820_917)]
+
+# Порог, на котором нужно останавливаться (решение владельца 2026-08-08).
+STOP_PCT = 90.0
 
 
 def collect(hours: float) -> dict:
@@ -116,6 +120,19 @@ def main() -> None:
     print(f"  запись кэша:     {t['cache_creation']:>12,}".replace(",", " "))
     print(f"  чтение кэша:     {t['cache_read']:>12,}".replace(",", " "))
     print(f"  ИТОГО billable:  {b:>12,}".replace(",", " "), f"({estimate_pct(b)})")
+
+    if len(CALIBRATION) >= 2:
+        (p1, v1), (p2, v2) = sorted(CALIBRATION)[:2]
+        if p2 != p1:
+            per_pct = (v2 - v1) / (p2 - p1)
+            stop_at = int(v1 + (STOP_PCT - p1) * per_pct)
+            left = stop_at - b
+            print(f"\n  порог {STOP_PCT:.0f}%:   {stop_at:>12,}".replace(",", " "))
+            if left > 0:
+                print(f"  запас:           {left:>12,}".replace(",", " "),
+                      f"≈ {left / per_pct:.0f} процентных пунктов")
+            else:
+                print("  ⛔ ПОРОГ ПРОЙДЕН — останавливаться")
     if data["by_session"]:
         print("\nПо сессиям (топ-5):")
         for sid, val in sorted(data["by_session"].items(), key=lambda kv: -kv[1])[:5]:
