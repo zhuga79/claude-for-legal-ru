@@ -1,0 +1,14 @@
+# Владельцы по умолчанию — ревью запрашивается автоматически на каждый PR.
+*                       @Blqd
+
+# Правовое существо: правка в скиллах требует ревью роли lawyer/compliance
+# и независимой проверки моделью другого провайдера (см. CONTRIBUTING.md).
+/*/skills/              @Blqd
+/*/CLAUDE.md            @Blqd
+
+# Условия участия и правила безопасности меняются только владельцем.
+/CONTRIBUTING.md        @Blqd
+/SECURITY.md            @Blqd
+/LICENSE                @Blqd
+/NOTICE                 @Blqd
+/.github/               @Blqd

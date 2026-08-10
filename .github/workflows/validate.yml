@@ -1,0 +1,114 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [master, main]
+
+permissions:
+  contents: read
+
+jobs:
+  manifest:
+    name: Манифест marketplace
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: marketplace.json — корректный JSON
+        run: |
+          python3 -c "import json,sys; json.load(open('.claude-plugin/marketplace.json'))"
+
+      - name: Каждый плагин из манифеста существует
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from pathlib import Path
+
+          data = json.load(open('.claude-plugin/marketplace.json'))
+          missing = []
+          for p in data.get('plugins', []):
+              src = (p.get('source') or '').lstrip('./')
+              if src and not Path(src).is_dir():
+                  missing.append(f"{p.get('name')} -> {src}")
+          if missing:
+              print('Плагин объявлен в манифесте, но каталога нет:')
+              print('\n'.join('  ' + m for m in missing))
+              sys.exit(1)
+          print(f"плагинов в манифесте: {len(data.get('plugins', []))} — все на месте")
+          PY
+
+  pii:
+    name: Персональные данные
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Реквизиты и контакты в тексте
+        run: |
+          python3 - <<'PY'
+          import re, sys
+          from pathlib import Path
+
+          # Признаки, не зависящие от конкретных имён: контакты и реквизиты
+          # в тексте скилла означают, что в пример попал живой документ.
+          PATTERNS = {
+              'адрес почты':  r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}',
+              'телефон':      r'\+7\s?\(?\d{3}\)?\s?\d{3}[- ]?\d{2}[- ]?\d{2}|\+7\d{10}',
+              'ИНН/ОГРН':     r'\b(?:ИНН|ОГРНИ?П?)[\s:]*\d{10,15}\b',
+              'счёт':         r'\b\d{20}\b',
+          }
+          ALLOW = re.compile(r'example\.(com|org)|@example|noreply|localhost|ромашка', re.I)
+
+          hits = []
+          for f in Path('.').rglob('*.md'):
+              if '.git' in f.parts:
+                  continue
+              for i, line in enumerate(f.read_text(encoding='utf-8', errors='replace').splitlines(), 1):
+                  if ALLOW.search(line):
+                      continue
+                  for label, pat in PATTERNS.items():
+                      if re.search(pat, line):
+                          hits.append(f'{f}:{i} — {label}')
+
+          if hits:
+              print('Похоже на реальные данные. Примеры должны быть обезличены:')
+              print('\n'.join('  ' + h for h in hits))
+              sys.exit(1)
+          print('чисто')
+          PY
+
+  skills:
+    name: Структура скиллов
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: У каждого скилла есть frontmatter с name и description
+        run: |
+          python3 - <<'PY'
+          import sys
+          from pathlib import Path
+
+          bad = []
+          for f in Path('.').rglob('skills/*/SKILL.md'):
+              text = f.read_text(encoding='utf-8', errors='replace')
+              if not text.startswith('---'):
+                  bad.append(f'{f} — нет frontmatter')
+                  continue
+              head = text.split('---', 2)[1]
+              for key in ('name:', 'description:'):
+                  if key not in head:
+                      bad.append(f'{f} — нет {key}')
+
+          if bad:
+              print('\n'.join('  ' + b for b in bad))
+              sys.exit(1)
+          print(f'скиллов проверено: {len(list(Path(".").rglob("skills/*/SKILL.md")))}')
+          PY
+
+      - name: Дисклеймер на месте
+        run: |
+          grep -q "не юридическая консультация" README.md \
+            || { echo "README потерял дисклеймер о характере выводов"; exit 1; }
+          echo "дисклеймер на месте"

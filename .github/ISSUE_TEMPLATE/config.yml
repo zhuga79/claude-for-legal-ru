@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Правила участия
+    url: https://github.com/Blqd/claude-for-legal-ru/blob/main/CONTRIBUTING.md
+    about: Что требуется от предложения и как устроено ревью — прочитайте до issue
+  - name: Статус скиллов
+    url: https://github.com/Blqd/claude-for-legal-ru/blob/main/TASKS.md
+    about: Что уже прошло ревью, а что помечено как непроверенное
+  - name: Вопрос по конкретному делу
+    url: https://github.com/Blqd/claude-for-legal-ru/blob/main/CONTRIBUTING.md#что-не-принимается
+    about: Проект делает инструменты и не разбирает споры участников

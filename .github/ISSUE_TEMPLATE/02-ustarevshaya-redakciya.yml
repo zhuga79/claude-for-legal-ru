@@ -1,0 +1,71 @@
+name: Устаревшая редакция
+description: Норма изменилась, скилл про это не знает
+title: "[редакция] "
+labels: ["правовая точность", "устаревание", "требует ревью"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Самый опасный дефект в проекте. Устаревшая норма внутренне непротиворечива,
+        выглядит грамотно и вычиткой не ловится — поэтому такие issue в приоритете.
+
+        Не прикладывайте персональные данные.
+
+  - type: input
+    id: skill
+    attributes:
+      label: Плагин и скилл
+      placeholder: nalogovoe-pravo / rezhimy
+    validations:
+      required: true
+
+  - type: textarea
+    id: outdated
+    attributes:
+      label: Норма в редакции, на которую опирается скилл
+      description: Что там сейчас написано.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Действующая редакция
+      description: Как норма звучит сейчас.
+    validations:
+      required: true
+
+  - type: input
+    id: changed_by
+    attributes:
+      label: Чем изменена
+      description: Реквизиты закона, которым внесено изменение.
+      placeholder: Федеральный закон от 08.08.2024 № 259-ФЗ
+    validations:
+      required: true
+
+  - type: input
+    id: in_force
+    attributes:
+      label: Дата вступления в силу
+      placeholder: 01.01.2025
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: На что это влияет в выводе скилла
+      description: |
+        Меняется ли квалификация, срок, ставка, состав документов. Если знаете
+        другие скиллы с той же проблемой — перечислите.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Подтверждение
+      options:
+        - label: Действующая редакция сверена по первоисточнику, а не по вторичному источнику
+          required: true
+        - label: В issue нет персональных данных
+          required: true

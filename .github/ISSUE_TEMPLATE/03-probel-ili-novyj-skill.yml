@@ -1,0 +1,74 @@
+name: Пробел или новый скилл
+description: Контур не покрывает ситуацию из практики, либо нужен новый скилл/плагин
+title: "[пробел] "
+labels: ["пробел", "обсуждение"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите задачу из практики, а не желаемую реализацию. Как её решать —
+        разберёмся в обсуждении.
+
+        Не прикладывайте персональные данные и узнаваемые документы клиентов.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Что предлагаете
+      options:
+        - Дополнить существующий скилл
+        - Новый скилл в существующем плагине
+        - Новый плагин (новый контур практики)
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Плагин
+      description: Для нового контура — напишите, какой предлагаете.
+      placeholder: trudovoe-pravo
+    validations:
+      required: true
+
+  - type: textarea
+    id: task
+    attributes:
+      label: Задача из практики
+      description: |
+        Что юрист делает руками сейчас и как часто это встречается.
+        Обезличенно.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Что должно получаться на выходе
+      description: Документ, чеклист, квалификация, расчёт срока — что именно.
+    validations:
+      required: true
+
+  - type: textarea
+    id: norms
+    attributes:
+      label: Нормативная база
+      description: |
+        Статьи и акты, на которых стоит контур. Для нового плагина — перечень
+        ключевых актов.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_not_existing
+    attributes:
+      label: Почему не помещается в существующий контур
+      description: Обязательно для нового плагина.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Подтверждение
+      options:
+        - label: В issue нет персональных данных и узнаваемых документов клиентов
+          required: true

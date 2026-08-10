@@ -1,0 +1,77 @@
+name: Неверная норма
+description: Скилл ссылается на несуществующую статью или толкует норму неправильно
+title: "[норма] "
+labels: ["правовая точность", "требует ревью"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Писать код не нужно. Достаточно указать, где ошибка и какая норма верна.
+
+        Не прикладывайте персональные данные: имена, ИНН, номера дел, реквизиты,
+        выдержки из переписки. Пример обезличивайте.
+
+  - type: input
+    id: skill
+    attributes:
+      label: Плагин и скилл
+      description: Где встретили. Если не помните точно — опишите словами.
+      placeholder: dogovornoe-pravo / nda-review
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Что скилл выдаёт сейчас
+      description: Скопируйте фрагмент вывода или процитируйте текст скилла.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Как должно быть
+    validations:
+      required: true
+
+  - type: textarea
+    id: norm
+    attributes:
+      label: Норма
+      description: |
+        Статья, пункт, часть. Не «по ГК», а «п. 2 ст. 434 ГК РФ».
+        Если позиция опирается на практику — реквизиты акта.
+      placeholder: |
+        п. 2 ст. 434 ГК РФ
+        п. 15 Постановления Пленума ВС РФ от 25.12.2018 № 49
+    validations:
+      required: true
+
+  - type: input
+    id: checked
+    attributes:
+      label: Дата сверки по первоисточнику
+      description: Когда вы открывали текст нормы и сверяли редакцию.
+      placeholder: 10.08.2026
+    validations:
+      required: true
+
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Происхождение сведения
+      description: Тег о том, откуда сведение взялось, а не насколько вы уверены.
+      options:
+        - "[сверено] открывал первоисточник и сверял текст"
+        - "[проверить по первоисточнику] взято из вторичного источника"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Подтверждение
+      options:
+        - label: В issue нет персональных данных и сведений, составляющих охраняемую тайну
+          required: true
