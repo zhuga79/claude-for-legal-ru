@@ -1,4 +1,10 @@
 matters/
 config/
+.claude/plugins/config/
+**/company-profile.md
+!company-profile.template.md
 *.bak
 dela/
+# рабочие продукты против личного плейбука (не шаблон форка)
+council/local-003/phase-b-rtk-playbook.md
+council/local-003/*.docx

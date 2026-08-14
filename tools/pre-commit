@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+# Pre-commit: не пустить персональные данные и секреты в публичный репозиторий.
+#
+# Проверяет только то, что попало в индекс. Два слоя:
+#   1. обезличенные признаки (почта, телефон, ИНН/ОГРН, СНИЛС, счёт, ключи) —
+#      brain-guard --generic-only, если он есть в PATH, иначе встроенная проверка;
+#   2. именные правила владельца практики (имена клиентов, названия дел) —
+#      из файла вне репозитория, применяются С ГРАНИЦАМИ СЛОВА.
+#
+# Почему границы слова. brain-guard применяет именное правило подстрокой, и
+# длинные альтернативы совпадают внутри обычных слов («доследственной»,
+# «Документы»). Гейт, срабатывающий на каждом коммите, обходят через
+# --no-verify — то есть он хуже отсутствующего. Здесь тот же список правил
+# применяется как целые слова.
+#
+# Установка: tools/install-hooks.sh
+# Обход в исключительном случае: git commit --no-verify (и объясните почему).
+
+set -uo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root" || exit 1
+
+# Именные правила лежат вне репозитория: это личные данные владельца практики,
+# в публичный репозиторий они не попадают никогда.
+for cand in "${BRAIN_PUBLISH_SECRETS:-}" "$HOME/brain/.publish-secrets.local" "$HOME/.config/brain/publish-secrets"; do
+  if [ -n "$cand" ] && [ -f "$cand" ]; then
+    export BRAIN_PUBLISH_SECRETS="$cand"
+    break
+  fi
+done
+
+status=0
+
+# --- Слой 1: обезличенные признаки -------------------------------------------
+if command -v brain-guard >/dev/null 2>&1; then
+  brain-guard staged --brain "$repo_root" --generic-only || status=1
+else
+  python3 - <<'PY' || status=1
+import re, subprocess, sys
+
+PATTERNS = {
+    'адрес почты': r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}',
+    'телефон':     r'(?<![\d-])\+7\s?\(?\d{3}\)?\s?\d{3}[- ]?\d{2}[- ]?\d{2}(?![\d-])',
+    'ИНН/ОГРН':    r'\b(?:ИНН|ОГРНИ?П?)[\s:]*\d{10,15}\b',
+    'СНИЛС':       r'\b\d{3}-\d{3}-\d{3}\s\d{2}\b',
+    'счёт':        r'(?<!\d)\d{20}(?!\d)',
+    'ключ API':    r'\b(?:sk-[A-Za-z0-9]{20,}|gh[pousr]_[A-Za-z0-9]{30,}|AIza[A-Za-z0-9_-]{30,})',
+    'приватный ключ': r'-----BEGIN [A-Z ]*PRIVATE KEY-----',
+}
+ALLOW = re.compile(r'example\.(com|org)|@example|noreply|localhost|ромашка|placeholder|<[a-z-]+>|0000000000', re.I)
+
+files = subprocess.run(['git', 'diff', '--cached', '--name-only', '--diff-filter=ACM'],
+                       capture_output=True, text=True).stdout.split()
+hits = []
+for name in files:
+    blob = subprocess.run(['git', 'show', f':{name}'], capture_output=True, text=True)
+    if blob.returncode:
+        continue
+    for i, line in enumerate(blob.stdout.splitlines(), 1):
+        if ALLOW.search(line):
+            continue
+        for label, pat in PATTERNS.items():
+            if re.search(pat, line):
+                hits.append(f'{name}:{i} — {label}')
+
+if hits:
+    print('pre-commit: похоже на персональные данные или секрет в индексе:')
+    print('\n'.join('  ' + h for h in hits))
+    sys.exit(1)
+PY
+fi
+
+# --- Слой 2: именные правила, целыми словами ---------------------------------
+if [ -n "${BRAIN_PUBLISH_SECRETS:-}" ]; then
+  python3 - <<'PY' || status=1
+import os, re, subprocess, sys
+from pathlib import Path
+
+pat = ''
+for line in Path(os.environ['BRAIN_PUBLISH_SECRETS']).read_text(encoding='utf-8', errors='replace').splitlines():
+    m = re.match(r"""\s*PII_PATTERN=['"](.+)['"]\s*$""", line)
+    if m:
+        pat = m.group(1)
+        break
+if not pat:
+    sys.exit(0)
+
+# Границы слова с учётом кириллицы: \b в python завязан на \w и для смешанного
+# текста даёт совпадения внутри слов.
+rx = re.compile(r'(?<![А-Яа-яЁёA-Za-z])(?:' + pat + r')(?![А-Яа-яЁёA-Za-z])', re.I)
+
+files = subprocess.run(['git', 'diff', '--cached', '--name-only', '--diff-filter=ACM'],
+                       capture_output=True, text=True).stdout.split()
+hits = []
+for name in files:
+    blob = subprocess.run(['git', 'show', f':{name}'], capture_output=True, text=True)
+    if blob.returncode:
+        continue
+    for i, line in enumerate(blob.stdout.splitlines(), 1):
+        if rx.search(line):
+            hits.append(f'{name}:{i} — именованная сущность')
+
+if hits:
+    print('pre-commit: именованная сущность из личного списка в индексе:')
+    print('\n'.join('  ' + h for h in hits))
+    print('Клиенты, дела и контрагенты в публичном репозитории обезличиваются:')
+    print('  «ООО „Ромашка“», «Заказчик», «сторона А».')
+    sys.exit(1)
+PY
+fi
+
+exit $status
