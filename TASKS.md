@@ -845,12 +845,14 @@
       не СИП первой инстанции) исправлена; таблицы госпошлин убраны. Непроверенное помечено.
       Ревью — один исполнитель, без диверсификации.
 
-- [~] [P2] local-037 — gap-fill `korporativnoe-pravo` (5 skills)
-      role: developer   mode: solo   started: 2026-08-27   by: claude-sonnet-5
-      `customize` — готов. Остаются 4: `podgotovka-osu`, `korporativnyj-komplaens`,
-      `postintegraciya`, `zaochnoe-golosovanie` (первый подагент упал на лимите API,
-      перезапущен).
-      acceptance: 5 SKILL.md; ФЗ-14/ФЗ-208 сверены; validate проходит.
+- [x] [P2] local-037 — gap-fill `korporativnoe-pravo` (5 skills)
+      role: developer   mode: solo   model: claude-sonnet-5 (подагент)   completed: 2026-08-27
+      Создано 5: `customize` + `podgotovka-osu`, `korporativnyj-komplaens`, `postintegraciya`,
+      `zaochnoe-golosovanie`. Сверка 2026-08-27: перечень запретов на заочное ст. 50 ФЗ-208
+      сужен после ФЗ-287; в `entity-compliance` вымышленная «декларация о бенефициарах в ФНС»
+      заменена на ст. 6.1 ФЗ-115 + ст. 14.25.1 КоАП; реформа ФЗ-287 (ст. 38.1, «заседание
+      или заочное голосование») учтена. Непроверенные санкции/пороги помечены.
+      Первый подагент упал на лимите API, задача доведена вторым запуском.
 
 - [x] [P2] local-038 — gap-fill `trudovoe-pravo` (4 skills)
       role: developer   mode: solo   model: claude-sonnet-5 (подагент)   completed: 2026-08-27
