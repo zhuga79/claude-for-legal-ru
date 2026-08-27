@@ -50,18 +50,25 @@ jobs:
           import re, sys
           from pathlib import Path
 
-          # Признаки, не зависящие от конкретных имён: контакты и реквизиты
-          # в тексте скилла означают, что в пример попал живой документ.
+          # Признаки, не зависящие от конкретных имён: контакты, реквизиты и
+          # секреты в публикуемом тексте означают, что в пример попал живой
+          # документ или рабочий credential.
           PATTERNS = {
               'адрес почты':  r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}',
               'телефон':      r'\+7\s?\(?\d{3}\)?\s?\d{3}[- ]?\d{2}[- ]?\d{2}|\+7\d{10}',
               'ИНН/ОГРН':     r'\b(?:ИНН|ОГРНИ?П?)[\s:]*\d{10,15}\b',
+              'СНИЛС':        r'\b\d{3}-\d{3}-\d{3}\s\d{2}\b',
               'счёт':         r'\b\d{20}\b',
+              'ключ API':     r'\b(?:sk-[A-Za-z0-9]{20,}|gh[pousr]_[A-Za-z0-9]{30,}|AIza[A-Za-z0-9_-]{30,})',
+              'приватный ключ': r'-----BEGIN [A-Z ]*PRIVATE KEY-----',
           }
-          ALLOW = re.compile(r'example\.(com|org)|@example|noreply|localhost|ромашка', re.I)
+          ALLOW = re.compile(r'example\.(com|org)|@example|noreply|localhost|ромашка|placeholder|<[a-z-]+>|0000000000', re.I)
+          TEXT_SUFFIXES = {'.md', '.json', '.yml', '.yaml', '.txt'}
 
           hits = []
-          for f in Path('.').rglob('*.md'):
+          for f in Path('.').rglob('*'):
+              if not f.is_file() or f.suffix not in TEXT_SUFFIXES:
+                  continue
               if '.git' in f.parts:
                   continue
               for i, line in enumerate(f.read_text(encoding='utf-8', errors='replace').splitlines(), 1):

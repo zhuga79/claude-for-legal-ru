@@ -149,7 +149,9 @@ API и приватные ключи) и — у мейнтейнеров — л�
 Плагины соответствуют контурам практики: `dogovornoe-pravo`,
 `korporativnoe-pravo`, `trudovoe-pravo`, `sudebnyj-process`,
 `nalogovoe-pravo`, `personalnye-dannye`, `intellektualnaya-sobstvennost`,
-`nekommercheskie-organizacii`, `vedenie-del`.
+`nekommercheskie-organizacii`, `nedvizhimost`, `protivodejstvie-otmyvaniyu`,
+`regulirovanie-ii`, `gosudarstvennye-zakupki`, `zaschita-prav-potrebitelej`,
+`administrativnoe-pravo`, `regulyatornyj-monitoring`, `vedenie-del`.
 
 Новый контур заводится отдельным плагином, а не свалкой в существующий.
 Прежде чем заводить — issue с обоснованием: какие задачи закрывает, почему

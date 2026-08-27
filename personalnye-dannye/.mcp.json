@@ -6,7 +6,7 @@
       "type": "http",
       "url": "https://drivemcp.googleapis.com/mcp/v1",
       "title": "Google Drive",
-      "description": "Поиск, чтение и загрузка документов из Google Drive."
+      "description": "Поиск, чтение и загрузка документов из Google Drive. Зарубежное хранилище — см. _warning_pdn: материалы по ПДн обычно нельзя загружать без проверки ч. 5 ст. 18 и ст. 12 ФЗ-152; по умолчанию держать выключенным."
     }
   },
   "recommendedCategories": [
