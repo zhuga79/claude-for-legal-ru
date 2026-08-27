@@ -879,13 +879,26 @@
       ст. 131 ГПК.
       acceptance: 1 SKILL.md; validate проходит.
 
-- [ ] [P3] local-042 — Решение по спорным пропускам (не переносить без явного да)
-      role: architect   mode: solo
-      Оценить и зафиксировать статус: (1) investigation-suite labor-law — 6 stateful skills
-      против одного `sluzhebnaya-proverka`, меняет модель плагина, нужен ADR; (2)
-      `share-deal-review`, `ip-clause-review`, `invention-intake` — возможное дублирование с
-      `odobrenie-sdelki` / `rasporyazhenie-pravami` / `sluzhebnye-rid`; (3) `contract-review`.
-      acceptance: по каждому — «переносим как local-0NN» либо «не переносим, причина» в LOG.md.
+- [x] [P3] local-042 — Решение по спорным пропускам
+      role: architect   mode: solo   model: claude-sonnet-5   completed: 2026-08-27
+      Решения (в LOG.md 2026-08-27):
+      - investigation-suite (6 skills) — НЕ переносим. `sluzhebnaya-proverka` уже свернула
+        апстрим-suite в один скилл по прямому решению (развилка ст. 193 / ст. 247 ТК), а
+        stateful-слой закрывает `vedenie-del`. Это не пробел, а разрешённое расхождение модели.
+      - `contract-review` — НЕ переносим. Маршрутизирующая модель форка (`review` → 3 под-скилла)
+        её заменяет сознательно.
+      - `ip-clause-review` — НЕ переносим. Закрыт связкой `rasporyazhenie-pravami` (право
+        распоряжения) + общий `dogovornoe-pravo:review`.
+      - `share-deal-review` → переносим (local-043), реальный пробел: ревью ДКП доли ООО
+        (ст. 21 ФЗ-14, нотариальная форма, преимущественное право) ни одним скиллом не закрыт.
+      - `invention-intake` → переносим (local-043): intake-процесс фиксации разработки, отличен
+        от правового разбора в `sluzhebnye-rid`.
+
+- [ ] [P3] local-043 — gap-fill по итогам local-042 (2 skills)
+      role: developer   mode: solo
+      - `ru-legal/packs/corporate-law/skills/share-deal-review` → `korporativnoe-pravo/skills/sdelka-s-dolyami`
+      - `ru-legal/packs/ip-law/skills/invention-intake` → `intellektualnaya-sobstvennost/skills/priem-razrabotki`
+      acceptance: 2 SKILL.md по конвенциям форка; ст. 21 ФЗ-14 / ст. 1295, 1370 ГК сверены; validate проходит.
 
 ## Приём вклада
 

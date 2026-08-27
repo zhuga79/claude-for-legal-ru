@@ -1704,3 +1704,26 @@ customize). Описание PR переписано, ошибочный тез�
 
 **Пункт (2) — терминологическая чистка skills — не начат.** Крупный сплошной проход,
 ждёт явного go-ahead владельца.
+
+## 2026-08-27 | claude-sonnet-5 | цель «выполнить все задачи по импорту из ru-legal» — карта пробелов + волна local-036…043
+
+Построена полная карта пробелов: сверены skill-списки всех 15 паков `ru-legal` с
+плагинами-аналогами форка. **6 паков волны local-025…030 и `nalogovoe-pravo` — 1:1, пробелов
+нет.** Легитимные пропуски только в ранее локализованных из апстрима плагинах — заведены
+local-036…043 в `TASKS.md`.
+
+Сделано в этой сессии:
+- 4 skill'а `customize` (korporativnoe-pravo, intellektualnaya-sobstvennost, trudovoe-pravo,
+  regulyatornyj-monitoring) — механический перенос по шаблону форка.
+- Волна подагентов (sonnet, без диверсификации — по решению владельца) на 15 содержательных
+  skills: ИС ×6 (036), корпоративное ×4 (037), трудовое ×3 + ИИ ×2 (038/039),
+  nda-составление + иск-составление (040/041).
+
+**local-042 — решения по спорным пропускам:**
+- investigation-suite labor-law (6 stateful skills) — **не переносим**. `sluzhebnaya-proverka`
+  уже свернула апстрим-suite в один скилл сознательно (развилка ст. 192–193 ТК против ст. 247
+  ТК), stateful-слой — у `vedenie-del`. Расхождение модели, не пробел.
+- `contract-review` — **не переносим**: маршрутизатор `review` → 3 под-скилла заменяет её.
+- `ip-clause-review` — **не переносим**: связка `rasporyazhenie-pravami` + `dogovornoe-pravo:review`.
+- `share-deal-review`, `invention-intake` — **переносим** (local-043): реальные пробелы.
+- Пак `litigation` ru-legal (subpoena/discovery/privilege-log) — не берём (common law).
