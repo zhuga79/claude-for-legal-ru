@@ -826,6 +826,67 @@
       model: openai-gpt-5
       completed: 2026-08-27T08:18:30Z
 
+## Импорт из ru-legal — закрытие gap-fill (волна local-036…042)
+
+Карта пробелов построена 2026-08-27 сверкой skill-списков всех паков `ru-legal` с
+плагинами-аналогами форка. Шесть паков волны local-025…030 и `nalogovoe-pravo` — 1:1,
+пробелов нет. Ниже — только легитимные пропуски в ранее локализованных плагинах.
+Методология переноса — раздел «Процесс на один skill» плана
+`~/.claude/plans/tranquil-gliding-adleman.md`: перенос-переработка, сверка норм по
+первоисточнику (`mcp__ru-pravo`), провенанс `[сверено]`/`[проверить]`, ревью — один
+исполнитель без диверсификации (по прямому указанию владельца).
+
+- [ ] [P2] local-036 — gap-fill `intellektualnaya-sobstvennost` (7 skills)
+      role: developer   mode: solo
+      источники ru-legal/packs/ip-law: `customize`, `fto-triage` → `svoboda-ispolzovaniya`,
+      `infringement-triage` → `triazh-narusheniya`, `oss-review` → `proverka-oss-licenzij`,
+      `portfolio` → `portfel-ip`, `rospatent-application` → `zayavka-v-rospatent`,
+      `takedown` → `blokirovka-kontenta`
+      acceptance: 7 SKILL.md по конвенциям форка; ч. 4 ГК сверена по первоисточнику;
+      marketplace/README не требуют правок (плагин уже в списке); validate проходит.
+
+- [ ] [P2] local-037 — gap-fill `korporativnoe-pravo` (5 skills)
+      role: developer   mode: solo
+      источники ru-legal/packs/corporate-law: `customize`, `corporate-meeting-prep` →
+      `podgotovka-osu`, `entity-compliance` → `korporativnyj-komplaens`,
+      `integration-management` → `postintegraciya`, `written-consent` → `zaochnoe-golosovanie`
+      acceptance: 5 SKILL.md; ФЗ-14/ФЗ-208 сверены; validate проходит.
+
+- [ ] [P2] local-038 — gap-fill `trudovoe-pravo` (4 skills)
+      role: developer   mode: solo
+      источники ru-legal/packs/labor-law: `customize`, `wage-hour-qa` → `rabochee-vremya-oplata`,
+      `leave-tracker` → `otpuska-uchet`, `log-leave` → `otpusk-zapis`
+      acceptance: 4 SKILL.md; ТК РФ сверён; validate проходит.
+
+- [ ] [P3] local-039 — gap-fill `regulyatornyj-monitoring` + `regulirovanie-ii` (3 skills)
+      role: developer   mode: solo
+      источники: ru-legal/packs/regulatory-monitor `customize`;
+      ru-legal/packs/ai-governance `aia-generation` → `ocenka-vozdejstviya-ii`,
+      `use-case-triage` → `triazh-scenariev-ii`
+      acceptance: 3 SKILL.md; validate проходит.
+
+- [ ] [P3] local-040 — gap-fill `dogovornoe-pravo`: `nda-draft` → `nda-sostavlenie`
+      role: developer   mode: solo
+      источник ru-legal/packs/contract-law/skills/nda-draft. Парная к существующему
+      `nda-review`. `contract-review` НЕ берём — маршрутизирующая модель форка (`review` →
+      3 под-скилла) её сознательно заменяет.
+      acceptance: 1 SKILL.md; ГК/ФЗ-98 сверены; validate проходит.
+
+- [ ] [P3] local-041 — gap-fill `sudebnyj-process`: `claim-draft-civil` → `isk-sostavlenie`
+      role: developer   mode: solo
+      источник ru-legal/packs/process-documents/skills/claim-draft-civil. Черновик искового
+      заявления; парная к существующей `isk-proverka`. Сверить структуру иска по ст. 125 АПК /
+      ст. 131 ГПК.
+      acceptance: 1 SKILL.md; validate проходит.
+
+- [ ] [P3] local-042 — Решение по спорным пропускам (не переносить без явного да)
+      role: architect   mode: solo
+      Оценить и зафиксировать статус: (1) investigation-suite labor-law — 6 stateful skills
+      против одного `sluzhebnaya-proverka`, меняет модель плагина, нужен ADR; (2)
+      `share-deal-review`, `ip-clause-review`, `invention-intake` — возможное дублирование с
+      `odobrenie-sdelki` / `rasporyazhenie-pravami` / `sluzhebnye-rid`; (3) `contract-review`.
+      acceptance: по каждому — «переносим как local-0NN» либо «не переносим, причина» в LOG.md.
+
 ## Приём вклада
 
 Задача пришла из корневой очереди Brain: она про этот репозиторий, а не про
