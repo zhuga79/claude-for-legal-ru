@@ -151,7 +151,8 @@ API и приватные ключи) и — у мейнтейнеров — л�
 `nalogovoe-pravo`, `personalnye-dannye`, `intellektualnaya-sobstvennost`,
 `nekommercheskie-organizacii`, `nedvizhimost`, `protivodejstvie-otmyvaniyu`,
 `regulirovanie-ii`, `gosudarstvennye-zakupki`, `zaschita-prav-potrebitelej`,
-`administrativnoe-pravo`, `regulyatornyj-monitoring`, `vedenie-del`.
+`administrativnoe-pravo`, `obrazovatelnoe-pravo`, `regulyatornyj-monitoring`,
+`vedenie-del`.
 
 Новый контур заводится отдельным плагином, а не свалкой в существующий.
 Прежде чем заводить — issue с обоснованием: какие задачи закрывает, почему
