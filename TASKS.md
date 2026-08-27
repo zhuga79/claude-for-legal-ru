@@ -836,48 +836,47 @@
 первоисточнику (`mcp__ru-pravo`), провенанс `[сверено]`/`[проверить]`, ревью — один
 исполнитель без диверсификации (по прямому указанию владельца).
 
-- [ ] [P2] local-036 — gap-fill `intellektualnaya-sobstvennost` (7 skills)
-      role: developer   mode: solo
-      источники ru-legal/packs/ip-law: `customize`, `fto-triage` → `svoboda-ispolzovaniya`,
-      `infringement-triage` → `triazh-narusheniya`, `oss-review` → `proverka-oss-licenzij`,
-      `portfolio` → `portfel-ip`, `rospatent-application` → `zayavka-v-rospatent`,
-      `takedown` → `blokirovka-kontenta`
-      acceptance: 7 SKILL.md по конвенциям форка; ч. 4 ГК сверена по первоисточнику;
-      marketplace/README не требуют правок (плагин уже в списке); validate проходит.
+- [x] [P2] local-036 — gap-fill `intellektualnaya-sobstvennost` (7 skills)
+      role: developer   mode: solo   model: claude-sonnet-5 (подагент)   completed: 2026-08-27
+      Создано 7: `customize` + `svoboda-ispolzovaniya`, `triazh-narusheniya`,
+      `proverka-oss-licenzij`, `portfel-ip`, `zayavka-v-rospatent`, `blokirovka-kontenta`.
+      Сверка: потолок компенсации ст. 1515 ГК 5→10 млн ₽ (ФЗ 214-ФЗ, с 04.01.2026),
+      новая ст. 1252.1 ГК; ошибка источника (иск о нарушении → арбитражный суд субъекта,
+      не СИП первой инстанции) исправлена; таблицы госпошлин убраны. Непроверенное помечено.
+      Ревью — один исполнитель, без диверсификации.
 
-- [ ] [P2] local-037 — gap-fill `korporativnoe-pravo` (5 skills)
-      role: developer   mode: solo
-      источники ru-legal/packs/corporate-law: `customize`, `corporate-meeting-prep` →
-      `podgotovka-osu`, `entity-compliance` → `korporativnyj-komplaens`,
-      `integration-management` → `postintegraciya`, `written-consent` → `zaochnoe-golosovanie`
+- [~] [P2] local-037 — gap-fill `korporativnoe-pravo` (5 skills)
+      role: developer   mode: solo   started: 2026-08-27   by: claude-sonnet-5
+      `customize` — готов. Остаются 4: `podgotovka-osu`, `korporativnyj-komplaens`,
+      `postintegraciya`, `zaochnoe-golosovanie` (первый подагент упал на лимите API,
+      перезапущен).
       acceptance: 5 SKILL.md; ФЗ-14/ФЗ-208 сверены; validate проходит.
 
-- [ ] [P2] local-038 — gap-fill `trudovoe-pravo` (4 skills)
-      role: developer   mode: solo
-      источники ru-legal/packs/labor-law: `customize`, `wage-hour-qa` → `rabochee-vremya-oplata`,
-      `leave-tracker` → `otpuska-uchet`, `log-leave` → `otpusk-zapis`
-      acceptance: 4 SKILL.md; ТК РФ сверён; validate проходит.
+- [x] [P2] local-038 — gap-fill `trudovoe-pravo` (4 skills)
+      role: developer   mode: solo   model: claude-sonnet-5 (подагент)   completed: 2026-08-27
+      Создано 4: `customize` + `rabochee-vremya-oplata`, `otpuska-uchet`, `otpusk-zapis`.
+      Сверка: новая редакция ст. 152 ТК с 01.09.2026 (ФЗ 144-ФЗ), новые чч. 7-9 ст. 99
+      (лимит до 240 ч), МРОТ-2026 27 093 ₽. Отменённая выплата 50 ₽/мес не перенесена.
+      Ревью — один исполнитель, без диверсификации.
 
-- [ ] [P3] local-039 — gap-fill `regulyatornyj-monitoring` + `regulirovanie-ii` (3 skills)
-      role: developer   mode: solo
-      источники: ru-legal/packs/regulatory-monitor `customize`;
-      ru-legal/packs/ai-governance `aia-generation` → `ocenka-vozdejstviya-ii`,
-      `use-case-triage` → `triazh-scenariev-ii`
-      acceptance: 3 SKILL.md; validate проходит.
+- [x] [P3] local-039 — gap-fill `regulyatornyj-monitoring` (+ решение по ai-governance)
+      role: developer   mode: solo   model: claude-sonnet-5   completed: 2026-08-27
+      `regulyatornyj-monitoring/skills/customize` — создан.
+      `aia-generation` / `use-case-triage` из ai-governance **НЕ переносим**: local-027
+      уже сознательно их исключил (формальная AIA по образцу EU AI Act основания в праве
+      РФ не имеет; вред субъектам ПДн — через `personalnye-dannye:pdn-assessment`).
+      Документированное исключение, не пробел. Файлы, начатые подагентом, откачены.
 
-- [ ] [P3] local-040 — gap-fill `dogovornoe-pravo`: `nda-draft` → `nda-sostavlenie`
-      role: developer   mode: solo
-      источник ru-legal/packs/contract-law/skills/nda-draft. Парная к существующему
-      `nda-review`. `contract-review` НЕ берём — маршрутизирующая модель форка (`review` →
-      3 под-скилла) её сознательно заменяет.
-      acceptance: 1 SKILL.md; ГК/ФЗ-98 сверены; validate проходит.
+- [x] [P3] local-040 — gap-fill `dogovornoe-pravo`: `nda-draft` → `nda-sostavlenie`
+      role: developer   mode: solo   model: claude-sonnet-5 (подагент)   completed: 2026-08-27
+      Пара к `nda-review`. Сверка: ст. 1467 ГК (бессрочность ноу-хау — норма, не риск),
+      вид неустойки по ст. 394 ГК, исключение ИП без работников (ч. 3 ст. 10 ФЗ-98).
 
-- [ ] [P3] local-041 — gap-fill `sudebnyj-process`: `claim-draft-civil` → `isk-sostavlenie`
-      role: developer   mode: solo
-      источник ru-legal/packs/process-documents/skills/claim-draft-civil. Черновик искового
-      заявления; парная к существующей `isk-proverka`. Сверить структуру иска по ст. 125 АПК /
-      ст. 131 ГПК.
-      acceptance: 1 SKILL.md; validate проходит.
+- [x] [P3] local-041 — gap-fill `sudebnyj-process`: `claim-draft-civil` → `isk-sostavlenie`
+      role: developer   mode: solo   model: claude-sonnet-5 (подагент)   completed: 2026-08-27
+      Пара к `isk-proverka`, покрывает АПК и ГПК. Сверка: ФЗ 259-ФЗ от 08.08.2024 переписал
+      шкалу госпошлины ст. 333.19 НК — устаревшие числа источника убраны, отнесены к
+      первоисточнику на дату подачи.
 
 - [x] [P3] local-042 — Решение по спорным пропускам
       role: architect   mode: solo   model: claude-sonnet-5   completed: 2026-08-27
@@ -894,11 +893,12 @@
       - `invention-intake` → переносим (local-043): intake-процесс фиксации разработки, отличен
         от правового разбора в `sluzhebnye-rid`.
 
-- [ ] [P3] local-043 — gap-fill по итогам local-042 (2 skills)
-      role: developer   mode: solo
-      - `ru-legal/packs/corporate-law/skills/share-deal-review` → `korporativnoe-pravo/skills/sdelka-s-dolyami`
-      - `ru-legal/packs/ip-law/skills/invention-intake` → `intellektualnaya-sobstvennost/skills/priem-razrabotki`
-      acceptance: 2 SKILL.md по конвенциям форка; ст. 21 ФЗ-14 / ст. 1295, 1370 ГК сверены; validate проходит.
+- [x] [P3] local-043 — gap-fill по итогам local-042 (2 skills)
+      role: developer   mode: solo   model: claude-sonnet-5 (подагент)   completed: 2026-08-27
+      `korporativnoe-pravo/skills/sdelka-s-dolyami` + `intellektualnaya-sobstvennost/skills/priem-razrabotki`.
+      Сверка: срок работодателя по п. 4 ст. 1370 ГК — 6 месяцев (ФЗ 35-ФЗ от 12.03.2014,
+      ранее 4; сверено по действующей редакции и профилю `intellektualnaya-sobstvennost/CLAUDE.md`);
+      нотариальная форма ДКП доли (п. 11 ст. 21 ФЗ-14), преимущественное право (п. 4-7).
 
 ## Приём вклада
 
@@ -958,14 +958,16 @@
   `council/local-034/`; HIGH-находки по `nedvizhimost`, `protivodejstvie-otmyvaniyu` и
   `administrativnoe-pravo` применены в этом шаге, MEDIUM по отсутствующему `currency-watch` в
   `gosudarstvennye-zakupki` закрыт добавлением справочника.
-  Остаётся: отдельные gap-fill skills внутри уже существующих паков
-  (`intellektualnaya-sobstvennost`, `korporativnoe-pravo` и возможные последующие расширения) —
-  три уже найденных файла по `trudovoe-pravo` и `regulyatornyj-monitoring` включены в релиз по
-  local-035. Пак `litigation`
-  ru-legal сознательно не берём — построен вокруг институтов common law (discovery/subpoena/
-  privilege log), которых в АПК/ГПК нет. План волны local-023 — `/home/user/.claude/plans/
-  tranquil-gliding-adleman.md` (описывает только фазу 1, фазы 2+ выполнены сверх плана по
-  прямому указанию владельца 2026-08-27).
+  **Gap-fill skills внутри существующих плагинов — волна local-036…043, закрыта 2026-08-27.**
+  Полная карта пробесов построена сверкой всех 15 паков ru-legal с плагинами форка. Перенесено
+  ~18 skills: ИС ×7 (036), трудовое ×4 (038), корпоративное ×5 (037 — 4 из 5 через подагента),
+  nda-составление (040), иск-составление (041), сделка с долями + приём разработки (043),
+  4 `customize`. **НЕ переносим** (документированные исключения, не пробелы): investigation-suite
+  labor-law, `contract-review`, `ip-clause-review` (local-042); `aia-generation`/`use-case-triage`
+  ai-governance (local-027/039). Пак `litigation` ru-legal сознательно не берём — построен вокруг
+  институтов common law (discovery/subpoena/privilege log), которых в АПК/ГПК нет. План волны
+  local-023 — `/home/user/.claude/plans/tranquil-gliding-adleman.md` (описывает только фазу 1,
+  фазы 2+ выполнены сверх плана по прямому указанию владельца 2026-08-27).
 - **Диверсифицированное ревью изначальных плагинов, никогда не проходивших его — закрыто
   2026-08-27 (local-031, local-032, local-033).** Три пробела, обнаруженные при построении карты
   диверсификации (`dogovornoe-pravo`, `personalnye-dannye` целиком, фаза A1 `sudebnyj-process`),
