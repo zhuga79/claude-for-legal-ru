@@ -10,7 +10,7 @@ argument-hint: "[меморандум ревью | путь к нему]"
 ---
 
 <!--
-Локализация РФ на основе commercial-legal/skills/stakeholder-summary (anthropic/claude-for-legal,
+Локализация РФ на основе commercial-legal/skills/stakeholder-summary (anthropics/claude-for-legal,
 Apache-2.0). Класс (b) по ADR-002.
 
 Независимое ревью другим провайдером (`codex`/OpenAI) выполнено 2026-08-27 — 2 находки применены:

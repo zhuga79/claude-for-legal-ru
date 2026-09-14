@@ -15,7 +15,7 @@ argument-hint: "[--redo перезапуск на настроенном]"
 
 <!--
 Локализация РФ на основе ip-legal/skills/cold-start-interview/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). Переработано под часть 4 ГК РФ: снят весь блок про
+(anthropics/claude-for-legal, Apache-2.0). Переработано под часть 4 ГК РФ: снят весь блок про
 attorney work product / patent agent privilege / IP management systems (Anaqua, CPA Global) —
 институтов и инструментов нет в целевой практике. Вопросы построены вокруг режима РИД
 (служебный / по заказу), а не вокруг типа объекта, как в оригинале — это разграничение решает

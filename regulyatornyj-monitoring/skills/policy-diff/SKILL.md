@@ -10,7 +10,7 @@ argument-hint: "[политика: путь или текст | акт: ссыл
 
 <!--
 Локализация РФ на основе regulatory-legal/skills/policy-diff/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0).
+(anthropics/claude-for-legal, Apache-2.0).
 -->
 
 # /policy-diff

@@ -9,7 +9,7 @@ argument-hint: "[путь к договору | реквизиты и услов
 ---
 
 <!--
-Локализация РФ на основе commercial-legal/skills/renewal-tracker (anthropic/claude-for-legal,
+Локализация РФ на основе commercial-legal/skills/renewal-tracker (anthropics/claude-for-legal,
 Apache-2.0). Класс (b) по ADR-002 с правовым краем: исчисление сроков по ст. 190–194 ГК.
 
 Независимое ревью другим провайдером (`codex`/OpenAI) выполнено 2026-08-27 — 2 находки применены:

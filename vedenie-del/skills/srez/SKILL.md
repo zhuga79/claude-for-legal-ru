@@ -8,7 +8,7 @@ argument-hint: "[краткое имя дела; без аргумента — �
 ---
 
 <!--
-Локализация РФ на основе litigation-legal/skills/matter-briefing (anthropic/claude-for-legal,
+Локализация РФ на основе litigation-legal/skills/matter-briefing (anthropics/claude-for-legal,
 Apache-2.0). Решение — ADR-004. Скилл только читает: ничего не вычисляет из норм и ничего
 не пишет в дело.
 -->

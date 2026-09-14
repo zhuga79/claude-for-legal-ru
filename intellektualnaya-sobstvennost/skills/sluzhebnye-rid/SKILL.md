@@ -14,7 +14,7 @@ argument-hint: "[опиши, кто и в каких отношениях соз
 ---
 
 <!--
-Локализация РФ на основе ip-legal/skills/invention-intake/SKILL.md (anthropic/claude-for-legal,
+Локализация РФ на основе ip-legal/skills/invention-intake/SKILL.md (anthropics/claude-for-legal,
 Apache-2.0) — но правовое существо переписано полностью: оригинал построен на институте hired-to-
 invent presumption и обязанности по assignment agreement в общем праве США, которого в части 4 ГК
 нет. Здесь применяется прямо противоположная по конструкции система: закон сам решает, кому

@@ -11,7 +11,7 @@ argument-hint: "[что случилось, дисциплина и/или ущ�
 
 <!--
 Локализация РФ на основе employment-legal/skills/internal-investigation/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). US attorney-client privilege, work-product,
+(anthropics/claude-for-legal, Apache-2.0). US attorney-client privilege, work-product,
 Weingarten rights и EEOC charge в праве РФ нет. Перенесены не процедуры апстрима, а развилка
 ТК: дисциплинарная (ст. 193) против имущественной (ст. 247). Служебная проверка на
 государственной гражданской службе (ст. 59 ФЗ-79) сюда не переносится.

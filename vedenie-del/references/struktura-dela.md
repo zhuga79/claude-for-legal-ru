@@ -1,4 +1,4 @@
-<!-- Локализация РФ на основе privacy-legal/skills/matter-workspace и litigation-legal/skills/matter-intake (anthropic/claude-for-legal, Apache-2.0). Решение — ADR-004. -->
+<!-- Локализация РФ на основе privacy-legal/skills/matter-workspace и litigation-legal/skills/matter-intake (anthropics/claude-for-legal, Apache-2.0). Решение — ADR-004. -->
 
 # Структура дела
 

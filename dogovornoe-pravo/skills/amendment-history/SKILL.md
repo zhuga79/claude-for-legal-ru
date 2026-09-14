@@ -11,7 +11,7 @@ argument-hint: "[базовый договор + допсоглашения | н
 ---
 
 <!--
-Локализация РФ на основе commercial-legal/skills/amendment-history (anthropic/claude-for-legal,
+Локализация РФ на основе commercial-legal/skills/amendment-history (anthropics/claude-for-legal,
 Apache-2.0). Класс (b) по ADR-002.
 
 Независимое ревью другим провайдером (`codex`/OpenAI) выполнено 2026-08-27 — 1 находка применена:

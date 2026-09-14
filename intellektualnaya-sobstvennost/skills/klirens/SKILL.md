@@ -11,7 +11,7 @@ argument-hint: "[обозначение, товары/услуги, классы
 
 <!--
 Локализация РФ на основе ip-legal/skills/clearance/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). USPTO TESS / common-law search переписаны под
+(anthropics/claude-for-legal, Apache-2.0). USPTO TESS / common-law search переписаны под
 открытые реестры Роспатента и объекты части 4 ГК.
 -->
 

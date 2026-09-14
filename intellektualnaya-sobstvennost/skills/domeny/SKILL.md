@@ -10,7 +10,7 @@ argument-hint: "[домен, зона, есть ли товарный знак, 
 
 <!--
 Локализация РФ на основе ip-legal/skills/takedown/SKILL.md в части доменов
-(anthropic/claude-for-legal, Apache-2.0). UDRP/DMCA как рабочий контур .ru/.рф не
+(anthropics/claude-for-legal, Apache-2.0). UDRP/DMCA как рабочий контур .ru/.рф не
 переносятся: национальные домены администрирует Координационный центр .RU/.РФ.
 -->
 

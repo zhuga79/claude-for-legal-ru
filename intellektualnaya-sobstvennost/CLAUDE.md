@@ -1,5 +1,5 @@
 <!--
-Локализация РФ на основе ip-legal/CLAUDE.md (anthropic/claude-for-legal, Apache-2.0). Правовое
+Локализация РФ на основе ip-legal/CLAUDE.md (anthropics/claude-for-legal, Apache-2.0). Правовое
 существо не переносится: attorney work product, patent agent privilege, DMCA, USPTO — институты
 US-права, которых в праве РФ нет. Фаза A: служебные РИД и распоряжение исключительным правом.
 Фаза B: товарные знаки (заявка, экспертиза, ст. 1486), клиренс, претензия о нарушении

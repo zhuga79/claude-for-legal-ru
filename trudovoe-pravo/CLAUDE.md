@@ -1,5 +1,5 @@
 <!--
-Локализация РФ на основе employment-legal/CLAUDE.md (anthropic/claude-for-legal, Apache-2.0).
+Локализация РФ на основе employment-legal/CLAUDE.md (anthropics/claude-for-legal, Apache-2.0).
 Фаза A: прекращение трудового договора (uvolnenie) и разграничение ГПХ/самозанятости от
 трудовых отношений (gph-i-samozanyatye). Фаза B: приём (priem-na-rabotu), ЛНА (lna),
 внутренняя проверка (sluzhebnaya-proverka), дистанционная работа (distancionnaya-rabota),

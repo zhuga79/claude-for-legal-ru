@@ -11,7 +11,7 @@ argument-hint: "[аудитория: sobstvennik | rukovoditel | komanda] [--del
 ---
 
 <!--
-Локализация РФ на основе corporate-legal/skills/deal-team-summary (anthropic/claude-for-legal,
+Локализация РФ на основе corporate-legal/skills/deal-team-summary (anthropics/claude-for-legal,
 Apache-2.0). Класс (b) по ADR-002 — форматирование под аудиторию. Существенно переработан один
 блок: у апстрима сводка «наследует привилегию источников», и рассылка за пределы privilege circle
 трактуется как её утрата. В праве РФ привилегии нет — см. «Что здесь не работает».

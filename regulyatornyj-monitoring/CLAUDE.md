@@ -1,5 +1,5 @@
 <!--
-Локализация РФ на основе regulatory-legal/CLAUDE.md (anthropic/claude-for-legal, Apache-2.0).
+Локализация РФ на основе regulatory-legal/CLAUDE.md (anthropics/claude-for-legal, Apache-2.0).
 Federal Register API, NPRM comments, state AG feeds не переносятся. Источники — regulation.gov.ru
 (проекты) и publication.pravo.gov.ru (официальное опубликование).
 

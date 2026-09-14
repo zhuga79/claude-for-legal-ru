@@ -11,7 +11,7 @@ argument-hint: "[обозначение и классы МКТУ | номер з
 ---
 
 <!--
-Локализация РФ на основе ip-legal (anthropic/claude-for-legal, Apache-2.0). USPTO
+Локализация РФ на основе ip-legal (anthropics/claude-for-legal, Apache-2.0). USPTO
 prosecution, office action, TTAB opposition в праве РФ нет: здесь — заявка в Роспатент
 и СИП, часть 4 ГК.
 -->

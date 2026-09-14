@@ -1,5 +1,5 @@
 <!--
-Локализация РФ на основе corporate-legal/CLAUDE.md (anthropic/claude-for-legal, Apache-2.0).
+Локализация РФ на основе corporate-legal/CLAUDE.md (anthropics/claude-for-legal, Apache-2.0).
 Классификация скиллов по ADR-002 зафиксирована в LOG.md (2026-08-08). Фаза A: решения органов
 управления и одобрение сделок.
 

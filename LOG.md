@@ -10,7 +10,7 @@
 
 - Оформлен folder-native Brain-проект: добавлены `BRAIN.md`, `TASKS.md`, `LOG.md`.
 - Путь добавлен в `~/.config/brain/dashboard-env` → `BRAIN_DASHBOARD_WORKSPACE_ROOTS`.
-- Проект: локализация плагинов `anthropic/claude-for-legal` под право РФ.
+- Проект: локализация плагинов `anthropics/claude-for-legal` под право РФ.
 
 ## 2026-07-29 | claude-opus-4-8 | local-001 done — эталон dogovornoe-pravo
 
@@ -895,7 +895,7 @@ local-003 (тест cold-start) ждёт обезличенный договор
 **Status:** Accepted · **Date:** 2026-08-08
 
 **Context.** Значительная часть практики владельца — НКО, в основном АНО и фонды. В апстриме
-`anthropic/claude-for-legal` контура НКО нет ни в каком виде: он построен вокруг corporations и
+`anthropics/claude-for-legal` контура НКО нет ни в каком виде: он построен вокруг corporations и
 LLC. `korporativnoe-pravo` построен на ФЗ-14 и ФЗ-208 и к НКО неприменим; сейчас он определяет
 форму первым шагом и при НКО останавливается — то есть у пользователя есть корректный отказ, но нет
 инструмента.
@@ -969,7 +969,7 @@ always-on-стоимость; пользователю нужно понимат
 Расхождение вынесено в скилл как чек-лист признаков переноса с российского образца.
 
 **Следствие для NOTICE.** `abhaziya-nko` и `nekommercheskie-organizacii` — оригинальные работы,
-а не производные от `anthropic/claude-for-legal`. NOTICE описывает форк как derivative work
+а не производные от `anthropics/claude-for-legal`. NOTICE описывает форк как derivative work
 целиком; уточнение не вносил — файл в зоне, требующей решения владельца.
 
 ## Сессия 2026-08-08 — 2026-08-09 · сводка и состояние на паузе
@@ -1374,7 +1374,7 @@ skills/nekommercheskoe-partnerstvo). Из `.claude-plugin/marketplace.json` уб
 ## 2026-08-26 | claude-sonnet-5 | local-023 — новый плагин `nalogovoe-pravo` (перенос из ru-legal)
 
 Владелец: импортировать в форк недостающие skills из соседнего проекта `ru-legal` (MCP
-data-layer форк того же upstream `anthropic/claude-for-legal`), с проверкой. Масштаб (59 skills
+data-layer форк того же upstream `anthropics/claude-for-legal`), с проверкой. Масштаб (59 skills
 в 7 полностью отсутствующих паках + ~25 в существующих) исключил разовый перенос — план
 (`/home/user/.claude/plans/tranquil-gliding-adleman.md`, согласован через plan-mode) выбрал
 фазой 1 пак `tax-law` → плагин `nalogovoe-pravo`: единственный из недостающих паков, уже
@@ -1759,7 +1759,7 @@ local-036…043 в `TASKS.md`.
 **Решение — новый плагин `obrazovatelnoe-pravo`.** Выбрано владельцем из трёх вариантов
 (новый плагин / скилл в `trudovoe-pravo` / отдельный SKILL.md без плагина). Имя широкое
 («образовательное право»), фаза A покрывает только целевое обучение; место под рост (платные
-образовательные услуги, ученический договор ст. 198 ТК). Аналога в `anthropic/claude-for-legal`
+образовательные услуги, ученический договор ст. 198 ТК). Аналога в `anthropics/claude-for-legal`
 нет — плагин собран под право РФ, не локализован (как `nekommercheskie-organizacii`, ADR-005).
 
 **Состав фазы A:** `cold-start-interview`, `customize`, `celevoj-dogovor` (основной скилл);
@@ -1787,3 +1787,19 @@ local-036…043 в `TASKS.md`.
 аграрии, педагоги, госслужба). (−) 17-й always-on плагин; правовое существо сверено только по
 датам актов, не по текстам пунктов — ревью правового существа ролью `lawyer` и диверсифицированное
 ревью другим провайдером не проводились, заведены отдельной задачей.
+
+## 2026-09-14T13:36:06Z | openai-gpt-5-7c1e | took local-045
+
+- Moved local-045 to in-progress.
+
+## 2026-09-14T13:39:49Z | openai-gpt-5-7c1e | lawyer review: fixed obrazovatelnoe-pravo responsibility split; added currency-watch and publication doc fixes
+
+- Moved local-045 to done.
+
+## 2026-09-14T13:51:01Z | openai-gpt-5-senior-7c1e | took local-046
+
+- Moved local-046 to in-progress.
+
+## 2026-09-14T13:51:38Z | openai-gpt-5-senior-7c1e | senior GPT review accepted by owner because independent reviewer unavailable; no technical/doc publication blockers found; history rewrite remains owner decision
+
+- Moved local-046 to done.

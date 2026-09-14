@@ -12,7 +12,7 @@ argument-hint: "[--shema путь] [--dokumenty папка] [--proba N] [--vyhod
 ---
 
 <!--
-Локализация РФ на основе corporate-legal/skills/tabular-review (anthropic/claude-for-legal,
+Локализация РФ на основе corporate-legal/skills/tabular-review (anthropics/claude-for-legal,
 Apache-2.0). Класс (b) по ADR-002 — движок таблицы, правового существа не несёт: что искать,
 задаёт вызывающий скилл или пользователь. Убраны выгрузка в Google Sheets по умолчанию
 (зарубежное хранилище при ПДн в документах) и шаблон схемы под американский M&A diligence.

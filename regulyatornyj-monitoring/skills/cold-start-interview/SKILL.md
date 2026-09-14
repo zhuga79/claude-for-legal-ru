@@ -10,7 +10,7 @@ argument-hint: "[--redo перезапуск на настроенном]"
 
 <!--
 Локализация РФ на основе regulatory-legal/skills/cold-start-interview/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). Вопросы про Federal Register и NPRM сняты.
+(anthropics/claude-for-legal, Apache-2.0). Вопросы про Federal Register и NPRM сняты.
 -->
 
 # /cold-start-interview

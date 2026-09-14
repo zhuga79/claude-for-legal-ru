@@ -11,7 +11,7 @@ argument-hint: "[наш знак и что делает нарушитель | �
 
 <!--
 Локализация РФ на основе ip-legal/skills/cease-desist/SKILL.md и
-infringement-triage/SKILL.md (anthropic/claude-for-legal, Apache-2.0). US cease-and-desist
+infringement-triage/SKILL.md (anthropics/claude-for-legal, Apache-2.0). US cease-and-desist
 и Lanham Act не переносятся: здесь п. 5.1 ст. 1252 и ст. 1515 ГК. DMCA takedown — класс (c),
 в этот скилл не входит.
 -->

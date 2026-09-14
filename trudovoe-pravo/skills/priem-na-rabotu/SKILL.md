@@ -12,7 +12,7 @@ argument-hint: "[кто принимается, должность, что уж�
 
 <!--
 Локализация РФ на основе employment-legal/skills/hiring-review/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). Правовое существо переписано под гл. 11 ТК РФ:
+(anthropics/claude-for-legal, Apache-2.0). Правовое существо переписано под гл. 11 ТК РФ:
 at-will offer letter, I-9, E-Verify, background-check FCRA — институтов, которых в праве РФ
 нет, здесь не переносится.
 -->

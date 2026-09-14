@@ -10,7 +10,7 @@ argument-hint: "<novoe | spisok | pereklyuchit | zakryt | net> [краткое-�
 
 <!--
 Локализация РФ на основе privacy-legal/skills/matter-workspace/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0); схема реестра — на основе
+(anthropics/claude-for-legal, Apache-2.0); схема реестра — на основе
 litigation-legal/skills/matter-intake/SKILL.md. Решение — ADR-004.
 
 Отличия от оригинала, сделанные сознательно:

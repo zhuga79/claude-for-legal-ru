@@ -12,7 +12,7 @@ argument-hint: "[--redo перезапуск на настроенном]"
 
 <!--
 Локализация РФ на основе corporate-legal/skills/cold-start-interview/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). Переработано под ГК РФ, ФЗ-14, ФЗ-208.
+(anthropics/claude-for-legal, Apache-2.0). Переработано под ГК РФ, ФЗ-14, ФЗ-208.
 -->
 
 # /cold-start-interview

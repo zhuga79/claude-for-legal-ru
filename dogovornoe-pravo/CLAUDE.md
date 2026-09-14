@@ -1,5 +1,5 @@
 <!--
-Локализация РФ на основе commercial-legal/CLAUDE.md (anthropic/claude-for-legal, Apache-2.0).
+Локализация РФ на основе commercial-legal/CLAUDE.md (anthropics/claude-for-legal, Apache-2.0).
 
 РАСПОЛОЖЕНИЕ КОНФИГУРАЦИИ
 

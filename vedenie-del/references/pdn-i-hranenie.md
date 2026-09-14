@@ -1,4 +1,4 @@
-<!-- Локализация РФ. Оригинал (matter-workspace, anthropic/claude-for-legal) режима персональных данных не содержит: "Enforce retention — out of scope". Для права РФ это неверно, см. ниже. Решение — ADR-004. -->
+<!-- Локализация РФ. Оригинал (matter-workspace, anthropics/claude-for-legal) режима персональных данных не содержит: "Enforce retention — out of scope". Для права РФ это неверно, см. ниже. Решение — ADR-004. -->
 
 # Персональные данные в папке дел
 

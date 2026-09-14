@@ -9,7 +9,7 @@ argument-hint: "[14 | 30 | 60 — горизонт в днях, по умолч�
 ---
 
 <!--
-Локализация РФ на основе litigation-legal/skills/portfolio-status (anthropic/claude-for-legal,
+Локализация РФ на основе litigation-legal/skills/portfolio-status (anthropics/claude-for-legal,
 Apache-2.0). Решение — ADR-004.
 
 Ключевое отличие от оригинала: этот скилл НИЧЕГО не вычисляет из норм. Он читает готовые строки

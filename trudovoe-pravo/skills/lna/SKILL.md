@@ -11,7 +11,7 @@ argument-hint: "[какой акт: проект, действующий, спо
 
 <!--
 Локализация РФ на основе employment-legal/skills/handbook-updates/SKILL.md и
-policy-drafting/SKILL.md (anthropic/claude-for-legal, Apache-2.0). Employee handbook и
+policy-drafting/SKILL.md (anthropics/claude-for-legal, Apache-2.0). Employee handbook и
 at-will disclaimer в праве РФ нет: здесь — институт ЛНА ст. 8 ТК.
 -->
 

@@ -1,4 +1,4 @@
-<!-- Локализация РФ на основе privacy-legal/references/currency-watch.md (anthropic/claude-for-legal, Apache-2.0). -->
+<!-- Локализация РФ на основе privacy-legal/references/currency-watch.md (anthropics/claude-for-legal, Apache-2.0). -->
 
 # Currency watch — ПДн РФ (что часто меняется, проверять веб-поиском)
 

@@ -10,7 +10,7 @@ argument-hint: "[тема или орган | ссылка на карточку
 
 <!--
 Локализация РФ на основе regulatory-legal/skills/reg-feed-watcher/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). Federal Register API не используется.
+(anthropics/claude-for-legal, Apache-2.0). Federal Register API не используется.
 -->
 
 # /monitoring

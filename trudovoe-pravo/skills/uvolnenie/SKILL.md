@@ -15,7 +15,7 @@ argument-hint: "[опиши ситуацию: кто, основание, что
 
 <!--
 Локализация РФ на основе employment-legal/skills/termination-review/SKILL.md
-(anthropic/claude-for-legal, Apache-2.0). Правовое существо переписано под гл. 13 ТК РФ:
+(anthropics/claude-for-legal, Apache-2.0). Правовое существо переписано под гл. 13 ТК РФ:
 в апстриме нет российской связки «основание — процедура — срок обращения в суд», вместо
 этого разбираются at-will employment, WARN Act, OWBPA — институтов, которых в праве РФ нет,
 здесь не переносится.

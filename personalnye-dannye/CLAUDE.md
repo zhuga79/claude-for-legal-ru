@@ -1,5 +1,5 @@
 <!--
-Локализация РФ на основе privacy-legal/CLAUDE.md (anthropic/claude-for-legal, Apache-2.0).
+Локализация РФ на основе privacy-legal/CLAUDE.md (anthropics/claude-for-legal, Apache-2.0).
 
 РАСПОЛОЖЕНИЕ КОНФИГУРАЦИИ
 Пользовательская конфигурация — по версионно-независимому пути:

@@ -15,7 +15,7 @@ argument-hint: "[опиши сделку с правами | вставь про
 ---
 
 <!--
-Локализация РФ на основе ip-legal/skills/ip-clause-review/SKILL.md (anthropic/claude-for-legal,
+Локализация РФ на основе ip-legal/skills/ip-clause-review/SKILL.md (anthropics/claude-for-legal,
 Apache-2.0). Правовое существо переписано полностью: часть 4 ГК построена вокруг закрытой пары
 договорных конструкций (отчуждение / лицензия, гл. 69 ГК) с императивными требованиями к форме и
 регистрации — институт, устроенный иначе, чем американский assignment vs. license с их гибкой

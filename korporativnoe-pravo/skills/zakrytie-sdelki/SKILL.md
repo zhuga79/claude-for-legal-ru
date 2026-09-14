@@ -12,7 +12,7 @@ argument-hint: "[ID пункта + новый статус | пусто — по
 ---
 
 <!--
-Локализация РФ на основе corporate-legal/skills/closing-checklist (anthropic/claude-for-legal,
+Локализация РФ на основе corporate-legal/skills/closing-checklist (anthropics/claude-for-legal,
 Apache-2.0). Класс (b) по ADR-002 — механика трекера. Перенесена структура «пункт → ответственный →
 срок → статус → блокирует ли», перечень групп переписан: конструкция «conditions precedent между
 signing и closing» из американской сделки в сделке с долями ООО в основном не воспроизводится —
