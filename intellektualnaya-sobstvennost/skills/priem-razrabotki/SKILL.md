@@ -31,7 +31,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Если файла нет или в разделе «Кто создаёт результаты» остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину
-нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
+нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-is`».
 
 Проверь `## Ведение дел` в профиле и `dela/_sostoyanie.md`. Если режим ведения дел включён и есть
 активное дело — собранные сведения и сроки пиши в реестр дела. Если режим включён, а активного

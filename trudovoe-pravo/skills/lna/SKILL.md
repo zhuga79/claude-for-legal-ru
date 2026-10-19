@@ -24,7 +24,7 @@ at-will disclaimer в праве РФ нет: здесь — институт Л
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
+`/trudovoe-pravo:cold-start-interview-tp`».
 
 Из профиля возьми: есть ли профсоюз, какие ЛНА уже приняты, ознакомлены ли работники под
 подпись. Сторона меняет вывод: для работодателя неознакомление — дыра в дисциплинарном деле;

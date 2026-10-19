@@ -32,7 +32,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/regulyatornyj-monitoring/CLAUDE.md`.
 Файла нет или в нём `[ЗАПОЛНИТЬ]` — стоп: запусти
-`/regulyatornyj-monitoring:cold-start-interview-regulyatornyj-monitoring`.
+`/regulyatornyj-monitoring:cold-start-interview-rm`.
 
 ## Pre-flight
 

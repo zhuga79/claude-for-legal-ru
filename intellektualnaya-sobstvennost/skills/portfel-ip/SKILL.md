@@ -25,7 +25,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`,
 раздел «Регистрации и распоряжение правами». Файла нет или остались `[ЗАПОЛНИТЬ]` — стоп:
-«Плагину нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
+«Плагину нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-is`».
 
 Если включён режим `vedenie-del` и есть активное дело — календарь сроков пиши в реестр дела;
 каждый срок несёт поля «кто исчислил» и «кто проверил», неподтверждённый расчёт помечай в

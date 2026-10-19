@@ -31,7 +31,7 @@ user-invocable: true
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Файла нет или остались `[ЗАПОЛНИТЬ]` в разделе «Изобретения, полезные модели, промышленные
 образцы» — стоп: «Плагину нужна настройка, запусти
-`/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
+`/intellektualnaya-sobstvennost:cold-start-interview-is`».
 
 Если включён режим `vedenie-del` и есть активное дело — выводы и запланированные проверки
 пиши в папку дела.

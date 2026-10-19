@@ -46,7 +46,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/korporativnoe-pravo/CLAUDE.md`. Если файла
 нет или в нём остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/korporativnoe-pravo:cold-start-interview-korporativnoe-pravo`». Без настройки работает только cold-start.
+`/korporativnoe-pravo:cold-start-interview-kp`». Без настройки работает только cold-start.
 
 Проверь `## Ведение дел` в профиле практики и `dela/_sostoyanie.md`. Если режим включён и есть
 активное дело — проверку и план пиши в папку дела: они содержат ИНН, наименование и внутренние

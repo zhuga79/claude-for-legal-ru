@@ -33,7 +33,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/regulirovanie-ii/CLAUDE.md`. Файла нет или
 в нём остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/regulirovanie-ii:cold-start-interview-regulirovanie-ii`.»
+`/regulirovanie-ii:cold-start-interview-rii`.»
 
 Система должна уже быть в `reestr-sistem-ii` (иначе сначала занеси её туда). Если включён режим
 `vedenie-del` и есть активное дело — результат пиши в папку дела.

@@ -29,7 +29,7 @@ IPEP/IOPEP/DPEP оставлены только как краткие техни
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/protivodejstvie-otmyvaniyu/CLAUDE.md`. Файла
 нет или в нём `[ЗАПОЛНИТЬ]` — стоп, направь на
-`/protivodejstvie-otmyvaniyu:cold-start-interview-protivodejstvie-otmyvaniyu`. Без настройки работает только cold-start.
+`/protivodejstvie-otmyvaniyu:cold-start-interview-pood`. Без настройки работает только cold-start.
 
 Если включён режим `vedenie-del` и есть активное дело — результат проверки пиши в досье клиента
 в реестре дела.

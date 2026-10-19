@@ -24,7 +24,7 @@ argument-hint: "[обозначение, товары/услуги, классы
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Файла нет или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
+`/intellektualnaya-sobstvennost:cold-start-interview-is`».
 
 ## Шаг 1. Зафиксируй, что именно чистим
 

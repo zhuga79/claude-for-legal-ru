@@ -47,7 +47,7 @@ sudebnyj-process/skills/obzhalovanie/SKILL.md; правовое существо
 нет — остановись:
 
 > «Профиль по исполнительному производству не настроен. Запустите
-> `/ispolnitelnoe-proizvodstvo:cold-start-interview-ispolnitelnoe-proizvodstvo`.»
+> `/ispolnitelnoe-proizvodstvo:cold-start-interview-ip`.»
 
 ## Инструкции
 

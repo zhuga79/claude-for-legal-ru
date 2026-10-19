@@ -25,7 +25,7 @@ infringement-triage/SKILL.md (anthropics/claude-for-legal, Apache-2.0). US cease
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Файла нет или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
+`/intellektualnaya-sobstvennost:cold-start-interview-is`».
 
 Общий претензионный контур (доставка, признание долга, ст. 165.1) — не дублируй, отсылайте
 к `/sudebnyj-process:pretenziya`. Здесь — только то, чем ИС-претензия отличается.

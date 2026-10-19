@@ -26,7 +26,7 @@ at-will offer letter, I-9, E-Verify, background-check FCRA — институт�
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или в разделе «Устройство работодателя» остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна
-настройка, запусти `/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
+настройка, запусти `/trudovoe-pravo:cold-start-interview-tp`».
 
 Определи сторону. Если кандидат — иностранец, после шага 1 уходи в
 `/trudovoe-pravo:inostrannye-rabotniki`: этот скилл не закрывает ФЗ-115. Если работа

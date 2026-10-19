@@ -162,11 +162,25 @@ API и приватные ключи) и — у мейнтейнеров — л�
 идентификатор в Agent Skills, а не только имя команды: при установке через
 `npx skills` совпадающие имена молча схлопываются (в репозитории останется один
 из дублей). Поэтому общие скиллы, повторяющиеся в каждом плагине
-(`cold-start-interview`, `customize`), именуются с суффиксом плагина —
-`cold-start-interview-<плагин>`, `customize-<плагин>` — и папка скилла совпадает
+(`cold-start-interview`, `customize`), именуются с коротким кодом плагина —
+`cold-start-interview-<код>`, `customize-<код>` — и папка скилла совпадает
 с именем. Команда в Claude Code при этом остаётся неймспейснутой:
 `/<плагин>:<имя-скилла>`. Уникальность проверяет CI (шаг «Имена скиллов
 уникальны»), дубли валят сборку.
+
+Коды плагинов:
+
+| Код | Плагин | Код | Плагин |
+|---|---|---|---|
+| `ap` | administrativnoe-pravo | `np` | nalogovoe-pravo |
+| `dp` | dogovornoe-pravo | `nd` | nedvizhimost |
+| `gz` | gosudarstvennye-zakupki | `nko` | nekommercheskie-organizacii |
+| `is` | intellektualnaya-sobstvennost | `op` | obrazovatelnoe-pravo |
+| `ip` | ispolnitelnoe-proizvodstvo | `pd` | personalnye-dannye |
+| `kp` | korporativnoe-pravo | `pood` | protivodejstvie-otmyvaniyu |
+| `rii` | regulirovanie-ii | `rm` | regulyatornyj-monitoring |
+| `sp` | sudebnyj-process | `tp` | trudovoe-pravo |
+| `zpp` | zaschita-prav-potrebitelej | `vd` | vedenie-del |
 
 Файл, изменённый относительно оригинала `anthropics/claude-for-legal`,
 помечается в заголовке: `Локализация РФ на основе <оригинальный путь>`.

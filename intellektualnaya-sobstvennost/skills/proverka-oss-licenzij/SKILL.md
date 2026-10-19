@@ -24,7 +24,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Файла нет или остались `[ЗАПОЛНИТЬ]` в разделе «Открытый исходный код» — стоп: «Плагину нужна
-настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
+настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-is`».
 
 Если включён режим `vedenie-del` и есть активное дело — выводы пиши в папку дела.
 

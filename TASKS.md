@@ -1098,3 +1098,11 @@
       policy-diff — вручную. Добавлен CI-шаг «Имена скиллов уникальны» и правило в CONTRIBUTING.
       Историю (LOG/TASKS/council) не переписывали.
       acceptance: `npx skills add . --list` → 156; имена уникальны 156/156; CI проходит. Готово.
+
+- [x] [P2] local-052 — Короткие коды в именах скиллов (убрать дублирование неймспейса)
+      role: architect   mode: solo   done: 2026-10-19   by: lawyer-1a9c
+      model: opencode/deepseek-v4.1-flash-free
+      После local-051 команда дублировала имя плагина. Введены коды (18 шт., уникальны):
+      cold-start-interview-<код>, customize-<код>. Переименованы 33 скилла/папки, обновлены
+      143 файла. Таблица кодов в CONTRIBUTING.md.
+      acceptance: 156 скиллов, имена уникальны, CLI находит 156. Готово.

@@ -37,7 +37,7 @@ argument-hint: "[опиши форму, годовой объём поступл
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nekommercheskie-organizacii/CLAUDE.md`,
 раздел «Финансирование и отчётность»: годовой объём поступлений, иностранное финансирование,
 целевой капитал. Если раздел не заполнен — стоп: «Плагину нужна настройка, запусти
-`/nekommercheskie-organizacii:cold-start-interview-nekommercheskie-organizacii`».
+`/nekommercheskie-organizacii:cold-start-interview-nko`».
 
 Если включён режим `vedenie-del` — срок 15 апреля кладётся в реестр дела как повторяющийся
 ежегодный срок (см. «Сроки в дело» в формате вывода).

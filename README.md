@@ -39,7 +39,7 @@ npx skills add zhuga79/claude-for-legal-ru --all
 скиллы останавливаются и просят настройку:
 
 ```
-/dogovornoe-pravo:cold-start-interview-dogovornoe-pravo
+/dogovornoe-pravo:cold-start-interview-dp
 ```
 
 > **Правка плагина не доезжает до среды сама.** Кэш версионный:

@@ -30,7 +30,7 @@ korporativnoe-pravo/skills/*/SKILL.md и nekommercheskie-organizacii/skills/orga
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет или
 есть `[ЗАПОЛНИТЬ]` в разделе «Устройство работодателя» — стоп: «Плагину нужна настройка, запусти
-`/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
+`/trudovoe-pravo:cold-start-interview-tp`».
 
 Определи сторону: заказчик (потенциальный работодатель) или исполнитель (потенциальный
 работник) — выводы и то, что стоит на кону, различаются. Заказчику грозит переквалификация,

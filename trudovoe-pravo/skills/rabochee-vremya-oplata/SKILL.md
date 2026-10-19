@@ -25,7 +25,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или в разделе «Устройство работодателя» остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна
-настройка, запусти `/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
+настройка, запусти `/trudovoe-pravo:cold-start-interview-tp`».
 
 Определи сторону (работодатель / работник) — процедура одна, но акценты вывода разные: для
 работника превышение лимита сверхурочных или недоплата за праздник — основание для жалобы и

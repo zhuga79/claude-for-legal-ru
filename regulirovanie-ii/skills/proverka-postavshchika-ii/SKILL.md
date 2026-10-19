@@ -30,7 +30,7 @@ consumer / Anthropic API) — она специфична для америка�
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/regulirovanie-ii/CLAUDE.md`. Файла нет или
 в нём остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/regulirovanie-ii:cold-start-interview-regulirovanie-ii`.»
+`/regulirovanie-ii:cold-start-interview-rii`.»
 
 Если включён режим `vedenie-del` и есть активное дело — результат пиши в папку дела.
 

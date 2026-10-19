@@ -1936,3 +1936,15 @@ cold-start-interview.
 неймспейснутыми по плагину. Через `npx skills` теперь ставится весь репозиторий (`--all`), а не
 125 из 156. Индексация на skills.sh — автоматическая по телеметрии установок; бейдж:
 `https://skills.sh/b/zhuga79/claude-for-legal-ru`.
+
+## 2026-10-19T01:00:00Z | lawyer-1a9c | короткие коды плагинов в именах скиллов (local-052)
+
+**Зачем.** После `local-051` команды стали избыточными: `/dogovornoe-pravo:cold-start-interview-
+dogovornoe-pravo`. Плагин уже назван в неймспейсе, дублировать его целиком не нужно.
+
+**Коды.** `ap, dp, gz, is, ip, kp, np, nd, nko, op, pd, pood, rii, rm, sp, tp, zpp, vd` (все
+уникальны). Переименованы 33 скилла и папки: `cold-start-interview-<код>` / `customize-<код>`
+(напр. `/dogovornoe-pravo:cold-start-interview-dp`, `/ispolnitelnoe-proizvodstvo:customize-ip`).
+Обновлены 143 живых файла; длинных суффиксов не осталось. Таблица кодов — в `CONTRIBUTING.md`.
+
+**Проверка.** `npx skills add . --list` → 156; имена уникальны; CI-гейт прежний.

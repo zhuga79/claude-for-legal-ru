@@ -16,7 +16,7 @@ argument-hint: '[путь к файлу | ссылка на Диск | вста�
 
 ## Инструкции
 
-1. **Загрузи `~/.claude/plugins/config/claude-for-legal-ru/dogovornoe-pravo/CLAUDE.md`.** Если есть плейсхолдеры — остановись: «Сначала запустите `/dogovornoe-pravo:cold-start-interview-dogovornoe-pravo` — мне нужно изучить ваш плейбук, чтобы проверять против него».
+1. **Загрузи `~/.claude/plugins/config/claude-for-legal-ru/dogovornoe-pravo/CLAUDE.md`.** Если есть плейсхолдеры — остановись: «Сначала запустите `/dogovornoe-pravo:cold-start-interview-dp` — мне нужно изучить ваш плейбук, чтобы проверять против него».
 
    Прочитай также `## Настройки ревью` → `confirm_routing`. Если поля нет — считай `true`.
 

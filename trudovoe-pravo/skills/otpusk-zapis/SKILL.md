@@ -23,7 +23,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
+`/trudovoe-pravo:cold-start-interview-tp`».
 
 Если включён `vedenie-del` и есть активное дело — пиши в файл учёта в папке дела (тот же, что
 читает `/trudovoe-pravo:otpuska-uchet`). Режим выключен — уточни у пользователя, куда вести

@@ -32,7 +32,7 @@ deposit заменён на обеспечительный платёж (ст. 3
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nedvizhimost/CLAUDE.md`. Файла нет или
-`[ЗАПОЛНИТЬ]` — стоп, направь на `/nedvizhimost:cold-start-interview-nedvizhimost`.
+`[ЗАПОЛНИТЬ]` — стоп, направь на `/nedvizhimost:cold-start-interview-nd`.
 
 Если включён режим `vedenie-del` и есть активное дело — срок найма, срок предупреждения о
 расторжении и налоговый режим наймодателя пиши в реестр дела.

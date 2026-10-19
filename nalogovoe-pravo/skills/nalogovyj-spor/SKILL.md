@@ -26,7 +26,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nalogovoe-pravo/CLAUDE.md`. Файла нет или
-`[ЗАПОЛНИТЬ]` — стоп, направь на `/nalogovoe-pravo:cold-start-interview-nalogovoe-pravo`.
+`[ЗАПОЛНИТЬ]` — стоп, направь на `/nalogovoe-pravo:cold-start-interview-np`.
 
 Если включён режим `vedenie-del` и есть активное дело — трёхмесячный срок на иск пиши в реестр
 дела немедленно, не отложенно.

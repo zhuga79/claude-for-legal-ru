@@ -37,7 +37,7 @@ Apache-2.0). Правовое существо переписано полнос
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Если файла нет или в нём остались `[ЗАПОЛНИТЬ]` в разделе «Регистрации и распоряжение правами» —
-стоп: «Плагину нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
+стоп: «Плагину нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-is`».
 
 Если включён режим `vedenie-del` и есть активное дело — выводы пиши в папку дела.
 

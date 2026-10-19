@@ -33,7 +33,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/obrazovatelnoe-pravo/CLAUDE.md`
 (и `company-profile.md` уровнем выше). Файла нет или остались `[ЗАПОЛНИТЬ]` — стоп:
-«Плагину нужна настройка, запусти `/obrazovatelnoe-pravo:cold-start-interview-obrazovatelnoe-pravo`».
+«Плагину нужна настройка, запусти `/obrazovatelnoe-pravo:cold-start-interview-op`».
 
 Если вопрос не о договоре о целевом обучении (платные образовательные услуги, ученический
 договор, спор об отчислении, апелляция ГИА) — **остановись** и назови нужный плагин

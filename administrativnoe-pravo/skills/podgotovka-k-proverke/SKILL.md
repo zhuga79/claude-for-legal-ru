@@ -27,7 +27,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/administrativnoe-pravo/CLAUDE.md`. Файла
-нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/administrativnoe-pravo:cold-start-interview-administrativnoe-pravo`.
+нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/administrativnoe-pravo:cold-start-interview-ap`.
 
 Если включён режим `vedenie-del` и известна дата начала проверки — зафиксируй её в реестре дела.
 

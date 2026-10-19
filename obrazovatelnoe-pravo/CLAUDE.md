@@ -10,7 +10,7 @@ anthropics/claude-for-legal нет. Решение — ADR-007 (LOG.md, 2026-08-
 Правила для каждого скилла:
 1. ЧИТАЙ конфигурацию по этому пути, НЕ из этого файла.
 2. Есть [ЗАПОЛНИТЬ] или файла нет — ОСТАНОВИСЬ и отправь на
-   /obrazovatelnoe-pravo:cold-start-interview-obrazovatelnoe-pravo.
+   /obrazovatelnoe-pravo:cold-start-interview-op.
 3. Общий профиль организации — уровнем выше: company-profile.md.
 4. Этот файл — ШАБЛОН, заменяется при обновлении плагина.
 -->

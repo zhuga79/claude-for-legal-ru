@@ -23,7 +23,7 @@ argument-hint: "[гражданство, статус пребывания, па
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
+`/trudovoe-pravo:cold-start-interview-tp`».
 
 Кадровое оформление (ст. 57, 65, 67, 68, 70) — `/trudovoe-pravo:priem-na-rabotu`. Этот
 скилл добавляет только иностранный контур.

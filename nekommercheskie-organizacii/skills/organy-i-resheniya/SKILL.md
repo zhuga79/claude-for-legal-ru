@@ -44,7 +44,7 @@ argument-hint: "[текст протокола/решения | опиши по�
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nekommercheskie-organizacii/CLAUDE.md`.
 Если файла нет или в нём остались `[ЗАПОЛНИТЬ]` в разделе «Устройство организации» — стоп:
-«Плагину нужна настройка, запусти `/nekommercheskie-organizacii:cold-start-interview-nekommercheskie-organizacii`».
+«Плагину нужна настройка, запусти `/nekommercheskie-organizacii:cold-start-interview-nko`».
 
 Если включён режим `vedenie-del` и есть активное дело — выводы пиши в папку дела.
 

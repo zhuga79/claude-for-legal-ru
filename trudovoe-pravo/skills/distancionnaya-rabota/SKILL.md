@@ -26,7 +26,7 @@ argument-hint: "[постоянная / временная / срыв связи
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
+`/trudovoe-pravo:cold-start-interview-tp`».
 
 Из профиля возьми, есть ли дистанционные работники и кадровый ЭДО.
 
