@@ -26,7 +26,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Файла нет или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/intellektualnaya-sobstvennost:cold-start-interview`».
+`/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
 
 Если включён режим `vedenie-del` и есть активное дело — **15-дневный срок на подачу иска
 после предварительной обеспечительной меры** и иные сроки пиши в реестр дела; выводы — в

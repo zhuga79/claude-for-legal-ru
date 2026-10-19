@@ -28,7 +28,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/regulirovanie-ii/CLAUDE.md`. Файла нет или
 в нём остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/regulirovanie-ii:cold-start-interview`.»
+`/regulirovanie-ii:cold-start-interview-regulirovanie-ii`.»
 
 **Применимость.** Этот скилл — только для организаций, которые сами обучают или дообучают модель.
 Если организация лишь потребляет чужой API (OpenAI/Anthropic/YandexGPT/GigaChat и подобное) — этот

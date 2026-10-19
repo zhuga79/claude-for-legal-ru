@@ -26,7 +26,7 @@ claude plugin install dogovornoe-pravo@claude-for-legal-ru
 скиллы останавливаются и просят настройку:
 
 ```
-/dogovornoe-pravo:cold-start-interview
+/dogovornoe-pravo:cold-start-interview-dogovornoe-pravo
 ```
 
 > **Правка плагина не доезжает до среды сама.** Кэш версионный:

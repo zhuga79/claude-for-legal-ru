@@ -38,7 +38,7 @@ argument-hint: "[текст грантового соглашения | опиш
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nekommercheskie-organizacii/CLAUDE.md`,
 разделы «Устройство организации» (уставные цели) и «Финансирование и отчётность» (иностранное
 финансирование). Если разделы не заполнены — стоп: «Плагину нужна настройка, запусти
-`/nekommercheskie-organizacii:cold-start-interview`».
+`/nekommercheskie-organizacii:cold-start-interview-nekommercheskie-organizacii`».
 
 Если включён режим `vedenie-del` и есть активное дело — выводы и сроки отчётности по гранту
 пиши в папку дела.

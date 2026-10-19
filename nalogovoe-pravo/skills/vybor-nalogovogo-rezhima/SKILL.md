@@ -31,7 +31,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nalogovoe-pravo/CLAUDE.md`. Если файла нет
 или в нём остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/nalogovoe-pravo:cold-start-interview`.» Без настройки работает только cold-start.
+`/nalogovoe-pravo:cold-start-interview-nalogovoe-pravo`.» Без настройки работает только cold-start.
 
 Если включён режим `vedenie-del` и есть активное дело — выводы пиши в папку дела.
 

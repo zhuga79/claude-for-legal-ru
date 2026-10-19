@@ -31,7 +31,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/gosudarstvennye-zakupki/CLAUDE.md`. Файла
-нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview`.
+нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview-gosudarstvennye-zakupki`.
 
 Сторона поставщика-участника — жалоба готовится от лица участника закупки. Инструментов ответа на
 жалобу от лица заказчика в этой фазе плагина нет.

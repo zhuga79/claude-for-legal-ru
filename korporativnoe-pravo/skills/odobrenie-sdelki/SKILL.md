@@ -39,7 +39,7 @@ Apache-2.0 — структура «определить требуется ли
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/korporativnoe-pravo/CLAUDE.md`. Если файла
 нет или в нём остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/korporativnoe-pravo:cold-start-interview».` Без настройки работает только cold-start.
+`/korporativnoe-pravo:cold-start-interview-korporativnoe-pravo».` Без настройки работает только cold-start.
 
 Если включён режим `vedenie-del` и есть активное дело — выводы пиши в папку дела.
 

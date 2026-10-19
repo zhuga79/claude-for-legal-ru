@@ -23,7 +23,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nedvizhimost/CLAUDE.md`. Файла нет или
-`[ЗАПОЛНИТЬ]` — стоп, направь на `/nedvizhimost:cold-start-interview`.
+`[ЗАПОЛНИТЬ]` — стоп, направь на `/nedvizhimost:cold-start-interview-nedvizhimost`.
 
 Если включён режим `vedenie-del` и есть активное дело — сроки регистрации и продления пиши в
 реестр дела.

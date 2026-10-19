@@ -60,7 +60,7 @@ argument-hint: "[опиши цель — формирование эндауме
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nekommercheskie-organizacii/CLAUDE.md`,
 раздел «Финансирование и отчётность» → «Целевой капитал». Если раздел не заполнен — стоп:
-«Плагину нужна настройка, запусти `/nekommercheskie-organizacii:cold-start-interview`».
+«Плагину нужна настройка, запусти `/nekommercheskie-organizacii:cold-start-interview-nekommercheskie-organizacii`».
 
 Если включён режим `vedenie-del` и есть активное дело — годовые сроки отчётности по целевому
 капиталу (шаг 7) клади в реестр дела как повторяющиеся.

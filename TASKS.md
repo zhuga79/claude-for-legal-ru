@@ -1088,3 +1088,13 @@
       `[проверить по первоисточнику]` с ч. 1.1 ст. 22 КАС.
       acceptance: Правки внесены; локальная валидация CI (JSON, PII, frontmatter, манифест 18/18)
       проходит; LOG.md обновлён. Готово.
+
+- [x] [P1] local-051 — Уникальные имена скиллов (fix skills.sh discovery) + CI-гейт
+      role: architect   mode: solo   done: 2026-10-19   by: lawyer-1a9c
+      model: opencode/deepseek-v4.1-flash-free
+      CLI находил 125/156 SKILL.md из-за дублей `name` (cold-start-interview ×17, customize ×16).
+      Переименованы в `cold-start-interview-<плагин>` / `customize-<плагин>` (33 скилла, папки
+      git mv); обновлены ссылки (172 команды, 6 путей, 48 «голых»), кросс-плагинная ссылка в
+      policy-diff — вручную. Добавлен CI-шаг «Имена скиллов уникальны» и правило в CONTRIBUTING.
+      Историю (LOG/TASKS/council) не переписывали.
+      acceptance: `npx skills add . --list` → 156; имена уникальны 156/156; CI проходит. Готово.

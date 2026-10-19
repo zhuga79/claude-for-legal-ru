@@ -114,6 +114,35 @@ jobs:
           print(f'скиллов проверено: {len(list(Path(".").rglob("skills/*/SKILL.md")))}')
           PY
 
+      - name: Имена скиллов уникальны
+        run: |
+          python3 - <<'PY'
+          import re, sys, collections
+          from pathlib import Path
+
+          # `name` в frontmatter — уникальный идентификатор в Agent Skills.
+          # Дубли (например, общий cold-start-interview в каждом плагине) молча
+          # схлопываются при установке через `npx skills` — падаем явно.
+          seen = collections.defaultdict(list)
+          for f in Path('.').rglob('skills/*/SKILL.md'):
+              if '.git' in f.parts:
+                  continue
+              m = re.search(r'^name:\s*(.+?)\s*$',
+                            f.read_text(encoding='utf-8', errors='replace'), re.M)
+              if m:
+                  seen[m.group(1).strip()].append(str(f))
+
+          dups = {k: v for k, v in seen.items() if len(v) > 1}
+          if dups:
+              print('Дублирующиеся имена скиллов (name должен быть уникальным):')
+              for k, v in dups.items():
+                  print(f'  {k}: {len(v)} ×')
+                  for p in v:
+                      print(f'    - {p}')
+              sys.exit(1)
+          print(f'имён скиллов: {len(seen)} — уникальны')
+          PY
+
       - name: Дисклеймер на месте
         run: |
           grep -q "не юридическая консультация" README.md \

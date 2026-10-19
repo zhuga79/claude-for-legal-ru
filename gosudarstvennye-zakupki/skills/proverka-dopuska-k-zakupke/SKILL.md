@@ -25,7 +25,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/gosudarstvennye-zakupki/CLAUDE.md`. Файла
-нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview`.
+нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview-gosudarstvennye-zakupki`.
 
 Этот скилл — сторона поставщика/участника. Проверяет допуск **нас** к конкретной закупке, а не
 допуск других участников (для этого — `proverka-rnp` по контрагенту-конкуренту, если нужно).

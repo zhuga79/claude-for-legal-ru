@@ -23,7 +23,7 @@ anthropics/claude-for-legal контура госзакупок нет вовс�
 Правила для каждого скилла:
 1. ЧИТАЙ конфигурацию по этому пути, НЕ из этого файла.
 2. Есть [ЗАПОЛНИТЬ] или файла нет — ОСТАНОВИСЬ: «Плагину нужна настройка, запусти
-   /gosudarstvennye-zakupki:cold-start-interview». Без настройки работает только cold-start.
+   /gosudarstvennye-zakupki:cold-start-interview-gosudarstvennye-zakupki». Без настройки работает только cold-start.
 3. Общий профиль организации — уровнем выше: company-profile.md.
 4. Этот файл — ШАБЛОН, заменяется при обновлении плагина. Пользовательских данных сюда не писать.
 -->
@@ -223,4 +223,4 @@ anthropics/claude-for-legal контура госзакупок нет вовс�
 
 ---
 
-*Перезапустить интервью: `/gosudarstvennye-zakupki:cold-start-interview --redo`*
+*Перезапустить интервью: `/gosudarstvennye-zakupki:cold-start-interview-gosudarstvennye-zakupki --redo`*

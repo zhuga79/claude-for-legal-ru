@@ -31,7 +31,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nedvizhimost/CLAUDE.md`. Файла нет или
-`[ЗАПОЛНИТЬ]` — стоп, направь на `/nedvizhimost:cold-start-interview`.
+`[ЗАПОЛНИТЬ]` — стоп, направь на `/nedvizhimost:cold-start-interview-nedvizhimost`.
 
 Если включён режим `vedenie-del` и есть активное дело — срок регистрации ДДУ и вычисленную
 неустойку пиши в реестр дела, не держи в памяти диалога.

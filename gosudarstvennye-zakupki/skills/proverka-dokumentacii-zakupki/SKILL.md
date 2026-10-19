@@ -24,7 +24,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/gosudarstvennye-zakupki/CLAUDE.md`. Файла
-нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview`.
+нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview-gosudarstvennye-zakupki`.
 
 Сторона поставщика-участника — решение об участии до вложения ресурсов в подготовку заявки. Заказчик
 может использовать этот же чек-лист для самопроверки собственной документации до размещения (см.

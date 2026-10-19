@@ -27,7 +27,7 @@ KYC/CDD/EDD/SoW/SoF заменены русскими эквивалентами
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/protivodejstvie-otmyvaniyu/CLAUDE.md`. Файла
 нет или в нём `[ЗАПОЛНИТЬ]` — стоп, направь на
-`/protivodejstvie-otmyvaniyu:cold-start-interview`. Без настройки работает только cold-start.
+`/protivodejstvie-otmyvaniyu:cold-start-interview-protivodejstvie-otmyvaniyu`. Без настройки работает только cold-start.
 
 Если включён режим `vedenie-del` и есть активное дело — досье клиента и решение о приёме на
 обслуживание пиши в реестр дела.

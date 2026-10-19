@@ -20,7 +20,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/gosudarstvennye-zakupki/CLAUDE.md`. Файла
-нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview`.
+нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview-gosudarstvennye-zakupki`.
 
 Сторона поставщика-участника. Предполагает, что `proverka-dopuska-k-zakupke` и
 `proverka-dokumentacii-zakupki` уже пройдены — без них риск готовить заявку на закупку, где мы

@@ -24,7 +24,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/gosudarstvennye-zakupki/CLAUDE.md`. Файла
-нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview`.
+нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/gosudarstvennye-zakupki:cold-start-interview-gosudarstvennye-zakupki`.
 
 Сторона поставщика-участника. Этот скилл считает **цену и её последствия по 44-ФЗ**, не налоговые
 последствия сделки (НДС, налог на прибыль с маржи заявки) — за расчётом налоговой нагрузки конкретной

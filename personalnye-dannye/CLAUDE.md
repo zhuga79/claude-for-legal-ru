@@ -7,8 +7,8 @@
 Правила:
 1. ЧИТАЙ конфигурацию по этому пути, не из этого файла.
 2. Если файла нет или в нём [ЗАПОЛНИТЬ] — ОСТАНОВИСЬ и скажи: «Плагину нужна настройка.
-   Запусти /personalnye-dannye:cold-start-interview». Без настройки работают только сам
-   cold-start-interview и --check-integrations.
+   Запусти /personalnye-dannye:cold-start-interview-personalnye-dannye». Без настройки работают только сам
+   cold-start-interview-personalnye-dannye и --check-integrations.
 3. Настройка ПИШЕТ по этому пути (создавая папки).
 4. Общий профиль компании — уровнем выше:
    ~/.claude/plugins/config/claude-for-legal-ru/company-profile.md — читай перед этим.
@@ -18,7 +18,7 @@
 # Профиль практики: персональные данные (ФЗ-152)
 
 *Заполняется cold-start-интервью. До этого — шаблон. Значения [ЗАПОЛНИТЬ] → запустите
-`/personalnye-dannye:cold-start-interview`. После заполнения редактируйте файл напрямую —
+`/personalnye-dannye:cold-start-interview-personalnye-dannye`. После заполнения редактируйте файл напрямую —
 каждый скилл читает его перед работой.*
 
 ---
@@ -296,4 +296,4 @@
 
 ---
 
-*Перезапустить интервью: `/personalnye-dannye:cold-start-interview --redo`*
+*Перезапустить интервью: `/personalnye-dannye:cold-start-interview-personalnye-dannye --redo`*

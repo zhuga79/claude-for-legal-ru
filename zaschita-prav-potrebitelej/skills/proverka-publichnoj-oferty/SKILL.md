@@ -18,7 +18,7 @@ user-invocable: true
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/zaschita-prav-potrebitelej/CLAUDE.md`.
 Файла нет или в нём `[ЗАПОЛНИТЬ]` — стоп, направь на
-`/zaschita-prav-potrebitelej:cold-start-interview`.
+`/zaschita-prav-potrebitelej:cold-start-interview-zaschita-prav-potrebitelej`.
 
 **Гейт.** Этот скилл проверяет проект оферты/условий, которые бизнес готовится
 опубликовать сам, — ревью со стороны продавца/исполнителя перед публикацией, а не

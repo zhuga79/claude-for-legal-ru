@@ -25,7 +25,7 @@ Weingarten rights и EEOC charge в праве РФ нет. Перенесены
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/trudovoe-pravo:cold-start-interview`».
+`/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
 
 Если работодатель — государственный орган и речь о гражданском служащем, **остановись**:
 служебная проверка по ст. 59 ФЗ от 27.07.2004 № 79-ФЗ — другой институт, этот скилл его не

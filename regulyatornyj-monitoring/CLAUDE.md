@@ -10,7 +10,7 @@ Federal Register API, NPRM comments, state AG feeds не переносятся.
 Правила для каждого скилла:
 1. ЧИТАЙ конфигурацию по этому пути, НЕ из этого файла.
 2. Есть [ЗАПОЛНИТЬ] или файла нет — ОСТАНОВИСЬ: «Плагину нужна настройка, запусти
-   /regulyatornyj-monitoring:cold-start-interview». Без настройки работает только cold-start.
+   /regulyatornyj-monitoring:cold-start-interview-regulyatornyj-monitoring». Без настройки работает только cold-start.
 3. Общий профиль организации — уровнем выше: company-profile.md.
 4. Этот файл — ШАБЛОН. Пользовательских данных сюда не писать.
 -->

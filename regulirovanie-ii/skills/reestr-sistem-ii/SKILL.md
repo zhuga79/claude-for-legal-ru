@@ -29,7 +29,7 @@ Impact Assessment, «AIA approved» как статус) — вместо них
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/regulirovanie-ii/CLAUDE.md`. Файла нет или
 в нём остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/regulirovanie-ii:cold-start-interview`.» Без настройки работает только cold-start.
+`/regulirovanie-ii:cold-start-interview-regulirovanie-ii`.» Без настройки работает только cold-start.
 
 Если включён режим `vedenie-del` и есть активное дело — реестр веди в папке дела, не в памяти
 диалога: он будет нужен всем остальным скиллам плагина как источник правды.

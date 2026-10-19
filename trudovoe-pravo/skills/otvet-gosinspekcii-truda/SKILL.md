@@ -34,7 +34,7 @@ anthropics/claude-for-legal нет). Переработка: убраны анг
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/trudovoe-pravo/CLAUDE.md`. Файла нет
 или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/trudovoe-pravo:cold-start-interview`».
+`/trudovoe-pravo:cold-start-interview-trudovoe-pravo`».
 
 Из профиля возьми: численность и категорию работодателя (влияет на мораторий, см. шаг 0),
 есть ли профсоюз, действующие ЛНА. Если включён `vedenie-del` — заведи или используй дело для

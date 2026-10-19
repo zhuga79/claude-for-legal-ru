@@ -51,7 +51,7 @@ argument-hint: "[политика: путь или текст | акт: ссыл
 
 ЛНА работодателя — `/trudovoe-pravo:lna` (мнение профсоюза, ознакомление).
 Политика ПДн — `personalnye-dannye`. Договорный плейбук — `dogovornoe-pravo` /
-`customize`, и только в user-config.
+`customize-dogovornoe-pravo`, и только в user-config.
 
 Этот скилл даёт таблицу правок, не новую редакцию целиком.
 

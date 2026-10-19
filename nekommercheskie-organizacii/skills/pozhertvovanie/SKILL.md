@@ -43,7 +43,7 @@ argument-hint: "[текст договора пожертвования/офер
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nekommercheskie-organizacii/CLAUDE.md`,
 раздел «Финансирование и отчётность». Если раздел не заполнен — стоп: «Плагину нужна настройка,
-запусти `/nekommercheskie-organizacii:cold-start-interview`».
+запусти `/nekommercheskie-organizacii:cold-start-interview-nekommercheskie-organizacii`».
 
 Если включён режим `vedenie-del` и есть активное дело — выводы пиши в папку дела.
 

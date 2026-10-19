@@ -30,7 +30,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/nalogovoe-pravo/CLAUDE.md`. Файла нет или
-`[ЗАПОЛНИТЬ]` — стоп, направь на `/nalogovoe-pravo:cold-start-interview`.
+`[ЗАПОЛНИТЬ]` — стоп, направь на `/nalogovoe-pravo:cold-start-interview-nalogovoe-pravo`.
 
 Если включён режим `vedenie-del` и есть активное дело — выводы пиши в папку дела.
 

@@ -36,7 +36,7 @@ invent presumption и обязанности по assignment agreement в общ
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Если файла нет или в нём остались `[ЗАПОЛНИТЬ]` в разделе «Кто создаёт результаты» — стоп:
-«Плагину нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview`».
+«Плагину нужна настройка, запусти `/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
 
 Если включён режим `vedenie-del` и есть активное дело — выводы и сроки пиши в реестр дела.
 

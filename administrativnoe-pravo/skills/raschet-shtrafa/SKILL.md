@@ -31,7 +31,7 @@ user-invocable: true
 ## Контекст дела
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/administrativnoe-pravo/CLAUDE.md`. Файла
-нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/administrativnoe-pravo:cold-start-interview`.
+нет или `[ЗАПОЛНИТЬ]` — стоп, направь на `/administrativnoe-pravo:cold-start-interview-administrativnoe-pravo`.
 
 ## Workflow
 

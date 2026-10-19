@@ -23,7 +23,7 @@ argument-hint: "[домен, зона, есть ли товарный знак, 
 
 Прочитай `~/.claude/plugins/config/claude-for-legal-ru/intellektualnaya-sobstvennost/CLAUDE.md`.
 Файла нет или остались `[ЗАПОЛНИТЬ]` — стоп: «Плагину нужна настройка, запусти
-`/intellektualnaya-sobstvennost:cold-start-interview`».
+`/intellektualnaya-sobstvennost:cold-start-interview-intellektualnaya-sobstvennost`».
 
 ## Шаг 1. Зона решает процедуру
 
